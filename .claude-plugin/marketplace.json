@@ -1,0 +1,13 @@
+{
+  "name": "likelyfad-prompt-system",
+  "version": "1.0.0",
+  "description": "Agent-loadable prompt skills for producing content with AI models.",
+  "plugins": [
+    {
+      "name": "ai-ugc",
+      "source": "./skills/ai-ugc",
+      "version": "1.0.0",
+      "description": "Turn a script + reference images into ready-to-paste realistic UGC talking-head video-ad prompts. Current model: Google Gemini Omni (swappable)."
+    }
+  ]
+}

@@ -1,23 +1,38 @@
-# New Prompt System
+# Likelyfad Prompt System
 
-A library of master prompt frameworks for generating content. Each framework is a
-locked, reusable template: swap the per-video variables, keep the locked sections
-intact, and paste into the target engine.
+A versioned, agent-loadable library of prompt **skills** for producing content with AI models.
 
-## Frameworks
+Built lean on purpose: an agent loads only the skill (and the one style) it needs — never the whole library — so the context window stays small and the output stays accurate.
 
-| Framework | Engine | Output | File |
+## Skills
+
+| Skill | What it produces | Current model (swappable) | Folder |
 |---|---|---|---|
-| Google Omni | Google Omni | 8s vertical 9:16 realistic UGC video | [`Google-Omni/MASTER-PROMPT.md`](Google-Omni/MASTER-PROMPT.md) |
+| `ai-ugc` | Realistic UGC talking-head video ads (short, vertical, lip-synced) | Google Gemini Omni | [`skills/ai-ugc/`](skills/ai-ugc/) |
 
-> Companion to the existing v1–v4 prompt frameworks — same idea (a fundamental
-> template you adapt per piece), built specifically for Google Omni.
+## How to use it
 
-## How it works
+- **Claude Code / Claude API / Agent SDK** → install the skill (below); it auto-loads when you ask for UGC video prompts.
+- **Any other agent (Codex / Cursor / etc.)** → point it at [`AGENTS.md`](AGENTS.md).
+- **As a human** → open the skill folder and read `SKILL.md`, then the style + examples.
 
-Every framework file is split into:
+### Install in Claude Code
+```
+/plugin marketplace add amanpreetsingh1998/likelyfad-prompt-system
+```
+Then the `ai-ugc` skill is available in your sessions. (Universal fallback that works in any agent: see `AGENTS.md`.)
 
-- **Master Template** — the verbatim, paste-ready default. This is the fundamental; keep it as the default.
-- **Variable Slots** — the only parts that change per video (reference image, subject, scene, reveal/punchline, dialogue, voice).
-- **Locked Sections** — realism + format rules that stay constant unless new intel changes them.
-- **Changelog / Intel Log** — every adjustment is recorded as the template improves over time.
+## Layout
+
+```
+skills/        capabilities as portable Skills (lean entry + on-demand detail)
+docs/          background research + prompt log — for humans, NOT loaded by agents
+CHANGELOG.md   version history (per-skill versions live in each skill's front-matter)
+AGENTS.md      universal agent entry point
+```
+
+## Design principles
+
+1. **Lean / progressive disclosure** — tiny always-loaded entry, detail paged in only when needed.
+2. **Model is a swappable layer** — model specifics live in `skills/ai-ugc/references/models/`; the craft (chassis, performance, styles) doesn't mention any model, so models can change without rework.
+3. **Locked vs. variable** — realism-critical blocks are locked (reused verbatim); only the script/scene/performance change per video.
