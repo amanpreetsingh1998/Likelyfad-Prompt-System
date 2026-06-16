@@ -1,7 +1,7 @@
 ---
 name: ai-ugc
 description: Use this skill whenever the user wants realistic UGC-style video-ad prompts — talking-head / creator-style short vertical videos where a person speaks to camera (often holding a product) for TikTok, Reels, or Shorts. Trigger it when the user shares a script or hook plus reference images (a person and/or a product) and wants ready-to-paste AI video prompts. Currently targets Google Gemini Omni; the craft is model-agnostic.
-version: 1.0.0
+version: 1.0.1
 updated: 2026-06-16
 ---
 
@@ -19,7 +19,7 @@ You turn a **script + reference images** into **ready-to-paste AI video prompts*
 
 ## What to read, and when (don't load all of it)
 
-- **Always, to write any prompt:** `references/chassis.md` — the section order, locked-vs-variable, the locked Voice block, performance craft.
+- **Always, to write any prompt:** `references/chassis.md` — the section order, locked-vs-variable, the Voice section, performance craft.
 - **For the current model's hard specs + fixes:** `references/models/gemini-omni.md` — durations, how references work, camera tokens, negatives, and a symptom→fix table. **(This is the swappable layer — when the model changes, only this file changes.)**
 - **For the look:** `references/styles/realistic-ugc.md` (brand-agnostic; works for any brand).
 - **For ready-to-paste patterns:** `examples/realistic-ugc.md`.
@@ -27,7 +27,7 @@ You turn a **script + reference images** into **ready-to-paste AI video prompts*
 
 ## Must-never rules
 
-- Never reword the **locked Voice block** or any locked section — they exist to keep output consistent across clips.
+- **Voice:** compose a voice that fits the creator (infer it from the reference image + brief, or use the one the user gives — see `references/chassis.md` → Voice), then **lock it for that project** and reuse it verbatim across that creator's clips; never let the voice drift clip-to-clip. Keep the other locked sections (Quality/Fidelity, Camera method, Style, Negatives) verbatim too.
 - Never write **"locked-off / static / tripod"** for the camera — the model freezes the shot. Use handheld wording.
 - Never say the background is **"consistent with"** a reference — instruct to **keep it exactly / use it as the first frame**, or the model reinvents it.
 - Never exceed the duration's **word budget**; never add **on-screen text/captions** in the generation (captions are added in the edit).
