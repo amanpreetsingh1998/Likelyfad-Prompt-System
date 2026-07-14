@@ -8,6 +8,12 @@
       "source": "./skills/ai-ugc",
       "version": "1.0.0",
       "description": "Turn a script + reference images into ready-to-paste realistic UGC talking-head video-ad prompts. Current model: Google Gemini Omni (swappable)."
+    },
+    {
+      "name": "ai-song",
+      "source": "./skills/ai-song",
+      "version": "1.0.0",
+      "description": "Turn a finished ad script (often 3 hooks + 1 body) into ready-to-paste Suno song prompts — a Style field + the script sung verbatim inside structure tags + settings — for a high-energy, non-rap brand song. Current model: Suno v5.5 Pro (swappable)."
     }
   ]
 }
