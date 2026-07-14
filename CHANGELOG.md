@@ -4,6 +4,16 @@ All notable changes to this system are documented here. Format follows [Keep a C
 
 ## [Unreleased]
 
+## ai-animation@1.1.0 — 2026-07-14
+### Added
+- **Singing delivery layer** (`references/delivery/singing.md`) — plugs into the chassis's self-contained Voice/Audio seam. The song arrives **finished** (e.g. from Suno) with its lyrics; the skill writes sung lip-sync prompts, never asks the model to compose vocals (unreliable).
+- The three sung-lip-sync rules: tag the track's role (`lip-sync … to @audio1`), **always transcribe the lyrics in the prompt** alongside the attached track (audio alone gets misheard), and ≤14s per generation (13s safe).
+- **Fidelity ladder** for attaching the song: tagged audio + transcript by default → **black-screen MP4 as a video reference** when rhythm drifts (Seedance follows video refs much more tightly) → native beat sync as a free win (camera/action land on the rhythm).
+- **Full-song segment workflow** (in scope for v1): split at phrase boundaries, one ≤13–14s generation per segment, constant reference pack + identical lock wording across segments, assemble in the edit.
+- Two sung modes: **on-screen singer** (mouth featured, lip-sync binds) and **sung montage** (track over b-roll, free movement).
+- Worked sung example (`examples/pixar-disney-singing.md`, flagged v1 — test & calibrate): a 12s sung jingle ad + the full-song segment pattern.
+- Model layer additions (`models/seedance.md`): supplied-audio mechanics + three new symptom→fix rows (misheard lyrics, timing drift, invented extra music).
+
 ## ai-animation@1.0.0 — 2026-07-13
 ### Added
 - New **`ai-animation`** skill: animated video-ad prompt system — turns a finished script + already-made images (character, scene, product) into ready-to-paste **image-to-video** prompts. **Pixar/Disney 3D** is the first style; the style layer is swappable and a singing/voice delivery mode is planned on top.

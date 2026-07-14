@@ -18,6 +18,14 @@ Seedance keys off the **@-tag + your stated role**, and will NOT reliably infer 
 
 > Untagged or vaguely-referenced assets are where drift lives. One phrase per asset, up top.
 
+## Supplied audio & sung lip-sync (this model)
+For singing (a finished track + lyrics — workflow → `../delivery/singing.md`), the mechanics on Seedance:
+- **Tag the track's role** like any asset: `Lip-sync the character's singing to @audio1` (a rhythm/mood-only track is a different role — say which).
+- **Transcribe the words in the prompt even with the track attached** — audio alone gets misheard (tests saw "Seedance 2.0" come back as "CGI 2.0" until the words were spelled out); track + transcript together is the fix.
+- **Raw audio references can drift in rhythm/intervals** (very noticeable with music). The high-fidelity workaround: convert the segment to a **black-screen MP4 and attach it as a video reference** — Seedance follows video references much more tightly.
+- **Keep sung segments ≤14s (13s safe)** — under the 15s ceiling; longer sync goes rubbery.
+- **Beat sync is native:** a strong-beat track pulls camera moves and action onto the rhythm automatically — write camera beats to the musical phrases.
+
 ## End frames — off by default
 `end_image` (start→end interpolation) only helps when the **ending is a fixed target**: an on-screen transformation, a before→after, or a logo/product reveal outro — **and** only when the start and end share near-identical framing (mismatched framing "morphs into a smeared mess"). Our default is **start frame + tagged elements + motion in text**, so skip end frames unless a shot genuinely needs one.
 
@@ -41,5 +49,8 @@ Seedance preserves a tagged start frame's subject, composition, and style, so do
 | Camera looks stiff / video-game-ish | Ask for eased moves ("smooth ease-in/ease-out dolly"), one move per beat; avoid linear/robotic motion. |
 | Lip-sync mushy | ≤10-word lines; front-facing, clear-mouthed character design; tag the language; frame the speaking scene medium/close. |
 | Multi-scene character inconsistency | One character reference for the whole generation; describe each new scene in text rather than swapping references mid-prompt. |
+| Sung words wrong / mumbled (supplied track) | Transcribe the exact lyrics in the prompt alongside the tagged track — never rely on the audio alone. |
+| Timing wanders off the supplied track | Attach the segment as a black-screen MP4 *video* reference instead of raw audio; keep it ≤13s. |
+| Extra music invented over a supplied track | State the role plainly: "@audio1 is the only music and the master timing." |
 
 *Confidence: durations / inputs / no-negative-field / native lip-sync are from Seedance / fal.ai docs; exact multi-scene counts and drift fixes are community-sourced starting points — calibrate against your own generations and fold wins back into this table.*
