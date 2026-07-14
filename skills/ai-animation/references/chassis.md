@@ -46,6 +46,7 @@ Keep this a clean, separable block so the future **singing** layer can swap in w
 - **Talking-head** — an on-screen character speaks: embed the line naturally (`She says: "…"`), 5–10 words, tag the language, note "accurate lip sync, natural pace." (Seedance prefers `says:` over bracketed `[Dialogue]:` tags.)
 - **Voiceover / narrated** — no on-screen speaker (or the mouth isn't featured): describe the VO voice + line; lip-sync rules don't bind, so the character/world can move freely.
 - **Product / world (no character)** — no dialogue; ambient / sound design only.
-- **Singing** — a **finished song + lyrics** arrive as assets; the character lip-syncs the sung lines (or the track carries a montage). This block swaps for the sung version → **`delivery/singing.md`** (load it only for sung jobs).
+- **Music video (beat-cut)** — a **finished song + SRT** arrive; no lip-sync — scenes hard-cut on timestamps the prompt-writer computes from the lyrics + beat grid, and the visuals generate **silent** (the song is laid over in the edit). Timing takes over Sections 5–6 → **`delivery/music-video.md`** (the main path for full songs).
+- **Sung lip-sync** — a character must visibly sing a line, mouth featured (jingle ads, a sung hook) → **`delivery/singing.md`** (load it only then).
 
 Then the **audio mix**: voice character (age/tone/energy), any per-word emphasis, ambient bed. **Music is optional per brief** — include it only when asked; don't hard-lock "no music." (In singing mode the supplied track IS the music — see `delivery/singing.md`.)

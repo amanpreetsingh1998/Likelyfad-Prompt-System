@@ -4,6 +4,17 @@ All notable changes to this system are documented here. Format follows [Keep a C
 
 ## [Unreleased]
 
+## ai-animation@1.2.0 — 2026-07-14
+### Added
+- **Beat-cut music-video mode** (`references/delivery/music-video.md`) — the main path for **full songs** (built from the team's SRT idea): a finished song + **SRT timestamped lyrics** + brief + images → per-segment prompts whose scenes **hard-cut in time with the beat and the lyrics**, with **no lip-sync**.
+- The core reframe baked in: **the SRT is input for the prompt-writer, never pasted into the video prompt** — the writer computes the lyric-to-scene map, the BPM bar grid (`240 ÷ BPM`), ≤14s segment windows on line/downbeat boundaries, and rebased local timestamps; the model receives only timestamped `hard cut to:` beats.
+- **Segment manifest** as the checkable artifact (window / lyric lines / scene / local cut points) — doubles as the edit sheet; solves the "manually cutting a 7–9 minute song" problem at the planning level.
+- **Silent-visuals default** — no audio attached, so the 15s audio-input limit stops constraining full songs; the track is laid over in the edit. Optional per-segment audio slice as `rhythm reference only` when motion must ride the beat.
+- Worked example (`examples/pixar-disney-music-video.md`, flagged v1 — test & calibrate): inputs → lyric-to-scene map → manifest (with a rebase check) → a full chorus-segment prompt → edit assembly.
+- Model layer additions (`models/seedance.md`): timestamped-beat adherence is good but not frame-exact; morph-vs-hard-cut and cut-density symptom→fix rows.
+### Changed
+- `delivery/singing.md` repositioned as the **special case** (a character visibly sings — jingle ads, sung hooks); full songs defer to `music-video.md` for windowing/manifest/assembly.
+
 ## ai-animation@1.1.0 — 2026-07-14
 ### Added
 - **Singing delivery layer** (`references/delivery/singing.md`) — plugs into the chassis's self-contained Voice/Audio seam. The song arrives **finished** (e.g. from Suno) with its lyrics; the skill writes sung lip-sync prompts, never asks the model to compose vocals (unreliable).

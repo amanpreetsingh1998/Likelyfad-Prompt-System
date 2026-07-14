@@ -31,17 +31,9 @@ Closing: keep the same bear face, design, and honey-gold fur, and the same Pixar
 
 > **If the timing wanders off the track:** re-run with the jingle converted to a black-screen MP4 attached as `@video1` ("follow the song in @video1 — it is the master timing"), per the fidelity ladder in `delivery/singing.md`.
 
-## 2) Full song — the segment pattern
+## 2) Full song?
 
-A 40s song becomes ~3 segment renders, split at phrase boundaries, assembled in the edit. Every segment reuses the SAME references and the SAME lock wording; only the scene, lyrics, and camera change:
-
-| Segment | Track piece | Shape |
-|---|---|---|
-| 1 | 0–13s (verse) | on-screen singer — establish the world, sung hook to camera |
-| 2 | 13–26s (build) | sung montage — b-roll riding the build, action peaks on downbeats |
-| 3 | 26–40s (chorus) | on-screen singer — biggest performance, belt the chorus, hero framing on the final beat |
-
-Per segment: same `@image1`/`@image2` (+ product if featured), same identity lock + style anchor verbatim, that segment's audio piece as `@audio1`, and **only that segment's lyric lines transcribed**. Lyric text on screen is added in the edit, never generated.
+That's a **music-video job** — the SRT-driven segment manifest, beat grid, and edit assembly live in `references/delivery/music-video.md` (worked example: `pixar-disney-music-video.md`). Use this file's sung prompt shape only for the individual manifest segments where the character visibly sings: same references + lock wording as every other segment, that segment's audio slice as `@audio1` (lip-sync source), and **only that segment's lyric lines transcribed**. Lyric text on screen is added in the edit, never generated.
 
 ## Why it's built this way (the sung deltas)
 - **The song arrives finished** — the prompt never asks the model to compose vocals; it lip-syncs to the supplied track (the reliable path).

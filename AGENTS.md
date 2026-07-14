@@ -4,7 +4,7 @@
 
 ## Skills available
 - **`ai-ugc`** — turns a script + reference images into ready-to-paste realistic-UGC talking-head video-ad prompts. Current model: Google Gemini Omni. **Entry point: `skills/ai-ugc/SKILL.md`.**
-- **`ai-animation`** — turns a finished script + already-made images (character, scene, product) into ready-to-paste **animated** video-ad prompts (Pixar/Disney 3D first). Also handles **sung delivery** — a finished song + lyrics lip-synced by the character (jingle ads, music videos). Current model: ByteDance Seedance 2.0 (image-to-video). **Entry point: `skills/ai-animation/SKILL.md`.**
+- **`ai-animation`** — turns a finished script + already-made images (character, scene, product) into ready-to-paste **animated** video-ad prompts (Pixar/Disney 3D first). Also handles music from a **finished song**: **beat-cut music videos** (song + SRT timestamps → scenes hard-cut to the beat and lyrics, no lip-sync) and **sung lip-sync** (jingle ads, a character visibly singing). Current model: ByteDance Seedance 2.0 (image-to-video). **Entry point: `skills/ai-animation/SKILL.md`.**
 
 ## How to operate
 1. Pick the skill that matches the job (realistic talking-head → `ai-ugc`; animated → `ai-animation`) and open its `SKILL.md`, then follow it.

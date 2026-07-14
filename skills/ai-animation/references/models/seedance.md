@@ -25,6 +25,7 @@ For singing (a finished track + lyrics — workflow → `../delivery/singing.md`
 - **Raw audio references can drift in rhythm/intervals** (very noticeable with music). The high-fidelity workaround: convert the segment to a **black-screen MP4 and attach it as a video reference** — Seedance follows video references much more tightly.
 - **Keep sung segments ≤14s (13s safe)** — under the 15s ceiling; longer sync goes rubbery.
 - **Beat sync is native:** a strong-beat track pulls camera moves and action onto the rhythm automatically — write camera beats to the musical phrases.
+- **Beat-cut music videos** (→ `../delivery/music-video.md`) usually need **no audio attached at all** — silent visuals + timestamped `hard cut to:` beats; the song is laid over in the edit. Timestamped-beat adherence is good but **not frame-exact** (within a fraction of a second) — the edit does the final nudge. Attach a segment's audio slice tagged `rhythm reference only — no dialogue, no lip-sync` just when motion must ride the beat within a scene.
 
 ## End frames — off by default
 `end_image` (start→end interpolation) only helps when the **ending is a fixed target**: an on-screen transformation, a before→after, or a logo/product reveal outro — **and** only when the start and end share near-identical framing (mismatched framing "morphs into a smeared mess"). Our default is **start frame + tagged elements + motion in text**, so skip end frames unless a shot genuinely needs one.
@@ -52,5 +53,7 @@ Seedance preserves a tagged start frame's subject, composition, and style, so do
 | Sung words wrong / mumbled (supplied track) | Transcribe the exact lyrics in the prompt alongside the tagged track — never rely on the audio alone. |
 | Timing wanders off the supplied track | Attach the segment as a black-screen MP4 *video* reference instead of raw audio; keep it ≤13s. |
 | Extra music invented over a supplied track | State the role plainly: "@audio1 is the only music and the master timing." |
+| Shots morph/blend instead of hard-cutting | Write `hard cut to:` explicitly at each timestamp, with a distinct location/framing change per cut — near-identical shots invite morphing. |
+| Beat-cut segment comes out smeared/chaotic | Cap ~4–5 cuts per segment; slow the cadence (cut every 2 bars); move faster cutting to the edit. |
 
 *Confidence: durations / inputs / no-negative-field / native lip-sync are from Seedance / fal.ai docs; exact multi-scene counts and drift fixes are community-sourced starting points — calibrate against your own generations and fold wins back into this table.*

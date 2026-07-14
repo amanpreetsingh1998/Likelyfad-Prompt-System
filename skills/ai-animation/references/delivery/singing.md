@@ -1,6 +1,6 @@
-# Delivery layer — Singing (a finished song + lyrics + sung lip-sync)
+# Delivery layer — Sung lip-sync (the character visibly sings a line)
 
-> The delivery mode that swaps into the chassis's **Voice / Audio block (Section 6)**. Everything else — references & roles, style anchor, scene beats, motion craft — stays exactly as `chassis.md` says. Load this file only for sung jobs. (Model mechanics for supplied audio → `models/seedance.md`.)
+> The **special case**: load this file only when a character must visibly *sing* to camera with the mouth featured — jingle ads, a sung hook, a mascot performance. For **full songs / music videos** (scenes hard-cut to the beat and the lyrics, no lip-sync) the main path is → **`music-video.md`**. This mode swaps into the chassis's **Voice / Audio block (Section 6)**; everything else stays as `chassis.md` says. (Model mechanics for supplied audio → `models/seedance.md`.)
 
 ## The input contract (what must arrive finished)
 - **The song** — a finished track (e.g. from Suno), delivered as segment(s) of **≤14 seconds** each (13s to be safe). We never ask the video model to *compose* the singing — generating vocals from lyrics alone is unreliable; lip-syncing to a supplied track is the reliable path. True music generation happens upstream, like images do.
@@ -9,7 +9,7 @@
 
 ## Two sung modes (pick per beat, mixable in one generation)
 - **On-screen singer** — the character performs to camera, mouth featured: sung lip-sync binds. Frame medium/close, front-facing on the sung lines (same mouth-visibility rule as speech).
-- **Sung montage / music-video b-roll** — the track plays over action with no featured mouth: lip-sync doesn't bind, the character and camera move freely with the music.
+- **Sung montage / music-video b-roll** — the track plays over action with no featured mouth: lip-sync doesn't bind, the character and camera move freely with the music. If the *whole job* is montage, that's not this file — use `music-video.md`.
 
 ## The three rules that make sung lip-sync land
 1. **Tag the track with its role.** *"Lip-sync the character's singing to @audio1."* An untagged track gets treated as mood music at best. A track used only for rhythm/mood is a different role — say which one it is.
@@ -33,11 +33,8 @@ The supplied track **is** the mix — never ask for additional generated music o
 - **Push the animation principles onto the music** — anticipation crouch into a downbeat, follow-through on hair/cloth through a spin, gesture arcs riding the phrase. The body dances while the mouth syncs (mouth + head + body sync together on this model).
 - **Emotion follows the song's arc** — map verse/build/chorus to escalating expression and camera energy, not one flat mood.
 
-## Full songs — the segment workflow
-1. **Split the finished track** into ≤13–14s segments at musical phrase boundaries (never mid-word).
-2. **One generation per segment.** Reuse the SAME character reference and the same identity-lock + style-anchor wording in every segment; describe each segment's scene in text. Small constant reference pack (start frame + character) beats a big varied one for drift.
-3. **Per segment, transcribe only that segment's lines** — tied to that segment's beats.
-4. **Assemble in the edit.** Lyric text on screen is an edit overlay — never generated in the video.
+## Full songs
+A full song is a **music-video job**: the windowing, SRT-driven segment manifest, timestamp rebasing, and edit assembly all live in → **`music-video.md`**. Use this file only for the individual segments where the character visibly sings — per such segment, transcribe only that segment's lines, tied to its beats, with the segment's audio slice attached as the lip-sync source. Lyric text on screen is an edit overlay — never generated in the video.
 
 ## Symptom → fix (singing-specific starting points)
 | Symptom | Fix |
