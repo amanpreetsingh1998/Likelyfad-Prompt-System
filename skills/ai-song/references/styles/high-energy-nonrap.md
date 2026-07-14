@@ -53,14 +53,14 @@ Curated to this fast/non-rap family. Lead with the script's vibe; reach for this
 Comma-separated, genre first, BPM front-loaded, ~15–30 words. Reinforce gapless + anti-rap. Exclude-Styles + settings → `models/suno.md`.
 
 ```
-[genre], [BPM] BPM, driving beat, high-energy, [vocal — e.g. bright belted female vocals], catchy melodic topline, continuous vocals, vocals start immediately, no instrumental breaks, polished modern mix
+[genre], [BPM] BPM, driving beat, high-energy, [vocal — e.g. bright belted female vocals], catchy melodic topline, vocal-forward production, singer begins on the first beat, continuous vocals, polished modern mix
 ```
 
-**Exclude Styles:** `rap, hip-hop, spoken word, instrumental break, breakdown, slow tempo`
+**Exclude Styles:** `rap, hip-hop, spoken word, instrumental break, extended intro` (keep to 2–5 — more and effectiveness collapses; this is the only home for negations, never the Style field)
 **Sliders:** Weirdness low · Style Influence high (note exact values; reuse across the set)
 
 ## Banned words in the Style field (they backfire here)
-Avoid hype/cinematic words that trigger long intros or vague results: `cinematic`, `epic`, `orchestral`, `atmospheric`, `stunning`, `breathtaking`, `professional voiceover`. Say the concrete sound instead (`driving`, `belted`, `polished mix`).
+Avoid hype/cinematic words that trigger long intros or vague results: `cinematic`, `epic`, `orchestral`, `atmospheric`, `stunning`, `breathtaking`, `professional voiceover`, and (flagged by one source as an intro-trigger) `anthemic` — prefer `big singalong chorus`. Also avoid **"no X" phrases entirely** (pink-elephant effect — negations go in Exclude Styles). Say the concrete sound instead (`driving`, `belted`, `polished mix`).
 
 ## Notes
 - One sound per set — the chosen treatment's Style string + Persona + sliders + BPM/key are reused across all 3 hook variants and every extend.

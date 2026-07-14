@@ -29,7 +29,7 @@ Do **not** repeat a line to manufacture a hook/chorus **unless the script alread
 ## Structure-tagging craft (how to derive Section 2's tags)
 1. **Read the whole script first** and derive its **full section map** — however many hooks/verses/choruses it actually contains. The section count is the **script's**, not a fixed number.
 2. **For a 3-hooks + 1-body script:** tag **Hook 1** as the opening section (`[Chorus]` — the earworm, opening on vocals, never `[Intro]`), then the **body** as its following sections (`[Verse 1]`, `[Chorus]`, `[Verse 2]`, …). Keep the hook a clean, self-contained section so it can be swapped in-context (Job A).
-3. **Keep it continuous** — no `[Bridge]` / `[Instrumental]` gaps in a driving song; end on `[Outro: Cold End]` / `[End]`.
+3. **Keep it continuous** — no `[Bridge]` / `[Instrumental]` gaps in a driving song; keep lyric blocks tight (no blank lines between sections); end on an `[Outro]` carrying sung lines, closed by `[End]`.
 4. **Long script?** Derive the full map first so numbering stays right across Extend chunks (→ `models/suno.md`, Job B).
 
 ## The sound-decision step (how to run Workflow step 2)
