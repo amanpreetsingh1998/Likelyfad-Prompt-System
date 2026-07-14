@@ -8,7 +8,7 @@ A short, fast **dance-pop** brand song from an invented script (`Lumé`, a focus
 
 **1) STYLE field** — paste into Suno's *Style of Music* box:
 ```
-dance-pop, 128 BPM, driving four-on-the-floor, high-energy, bright belted female vocals, catchy melodic topline, vocal-forward production, singer begins on the first beat, continuous vocals, polished modern mix
+dance-pop, 128 BPM, driving four-on-the-floor, high-energy, bright belted female vocals, catchy melodic topline, continuous wall-to-wall vocals, vocals start immediately, no instrumental intro, no instrumental breaks, polished modern mix
 ```
 
 **2) LYRICS field** — paste into Suno's *Lyrics* box (the master = Hook 1 + Body, verbatim):
@@ -28,7 +28,7 @@ Back in the game, back on my grind again
 ```
 
 **3) Settings:**
-- **Exclude Styles:** `rap, hip-hop, spoken word, instrumental break, extended intro` (2–5 max — the only home for negations)
+- **Exclude Styles:** `rap, hip-hop, spoken word, instrumental intro, instrumental break, breakdown, slow tempo` (wide list — account-tested better than a trimmed one)
 - **Sliders:** Weirdness ~30% · Style Influence ~75% (note the exact values and reuse them for every hook swap)
 - **Persona:** create one from the winning master take (female, bright, energetic) and reuse it for both hook swaps
 - **Stated BPM + key:** 128 BPM, key of F♯ minor
@@ -62,7 +62,7 @@ Feel the switch flip on today
 ## Why it's built this way (the song deltas)
 - **Verbatim words** — the script is sung exactly; only `[tags]`, one brand respelling, and line breaks were added. No line was repeated to force a chorus.
 - **Two fields, strict** — genre/BPM/vocal live in the Style box; only words + tags in the Lyrics box.
-- **Gapless + non-rap** — opens on the hook (no `[Intro]`), no `[Bridge]`/`[Instrumental]`, **no blank lines between sections** (blank space invites instrumental fills), `[End]` as the literal last line; BPM + sung genre up front, rap excluded via Exclude Styles (never "no X" in Style — pink-elephant effect).
+- **Gapless + non-rap** — opens on the hook (no `[Intro]`), no `[Bridge]`/`[Instrumental]`, **no blank lines between sections** (blank space invites instrumental fills), `[End]` as the literal last line; BPM + sung genre up front; belt-and-suspenders anti-gap wording (positive phrases + in-Style negations + the wide Exclude list — account-tested).
 - **Matched hooks** — the master + Replace-Section method regenerates each hook *inside* the body, so tempo/key/voice match; hooks are **not** rendered separately.
 - **One sound per set** — the Style string + Persona + sliders + BPM/key are frozen across all three variants.
 
