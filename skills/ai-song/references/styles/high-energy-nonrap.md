@@ -59,6 +59,14 @@ Comma-separated, genre first, BPM front-loaded, ~15–30 words. Reinforce gaples
 **Exclude Styles:** `rap, hip-hop, spoken word, instrumental intro, instrumental break, breakdown, slow tempo` (wide list — an account A/B beat the trimmed "2–5 entries" version; keep it wide)
 **Sliders:** Weirdness low · Style Influence high (note exact values; reuse across the set)
 
+## Account-proven strings (male ad set, 2026-07 render A/Bs)
+Best gapless run so far — **dance-pop beat anthemic pop-rock** (guitar-led rock invites riffs/turnarounds between phrases; four-on-the-floor pop keeps the topline riding the beat):
+```
+high-energy dance-pop, 160 BPM, driving four-on-the-floor beat, gritty belted male vocals, vocals dominate the mix, singer begins on the first beat, wall-to-wall continuous vocals, catchy melodic topline, tight punchy modern mix
+```
+**Exclude Styles for that run:** `instrumental intro, instrumental break, breakdown, rap, spoken word`
+Notes: `vocals dominate the mix` measurably pulled vocals forward; 148 → 160 BPM both stayed sung. The hook-arc variant (stripped opening building toward a drop) lives in `models/suno.md` (Job A).
+
 ## Banned words in the Style field (they backfire here)
 Avoid hype/cinematic words that trigger long intros or vague results: `cinematic`, `epic`, `orchestral`, `atmospheric`, `stunning`, `breathtaking`, `professional voiceover`. (`anthemic` was flagged by one guide as an intro-trigger but tested fine on our account; "no instrumental intro / no instrumental breaks" phrases also tested fine — better than without, despite pink-elephant lore.) Say the concrete sound instead (`driving`, `belted`, `polished mix`).
 
