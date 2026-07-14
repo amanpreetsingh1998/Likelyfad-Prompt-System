@@ -17,3 +17,5 @@
 - Keep the skill's **locked sections** (e.g. the Voice block) **verbatim** — never reword them.
 
 *(Claude Code reads `CLAUDE.md`, which points here. Codex, Cursor, Copilot, and others read this file directly.)*
+
+*(For Claude Code users, `ai-song` is also registered as a proper Agent Skill via `.claude/skills/ai-song` — a symlink to `skills/ai-song`, so there is one source of truth. It auto-loads on trigger or via `/ai-song`. To use it outside this repo: copy the `skills/ai-song` folder into `~/.claude/skills/` for personal use in any project, or zip it and upload as a custom skill on claude.ai.)*
