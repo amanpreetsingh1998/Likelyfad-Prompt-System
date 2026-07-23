@@ -30,6 +30,15 @@ Generation is slow, so **pack the ad into a single ≤15s render** whenever the 
 
 > Phrase it plainly: *"Use @image1 as the first frame and the world. Use @image2 as the character — keep the same face, design, and outfit throughout. Use @image3 as the product — preserve its label and shape exactly."* The `@` is just a handle; the stated **role** is what works. Tag only what you're actually given.
 
+### Multiple characters (two or more in one story)
+- **Every character gets their own @-tag, their own one-sentence physical description, and their own identity lock** — "…as a character — <short description>; keep their face, design, and outfit consistent in every shot they appear in."
+- **Add one explicit disambiguation line** after the roles: *"These are two distinct characters and one product."* (Adjust the count.) Without it, identities blend.
+- **Story names never enter the prompt.** Names ("Bruno", "David") are planning handles in conversation only; every shot line says "the @image2 character…" — a name in the prompt invites the model to invent an identity for it.
+- **Background extras are written explicitly generic** — "a varied, generic background crowd of new incidental people" — so tagged identities don't bleed into them.
+
+## Vocabulary discipline — ask for the banned list up front
+Before writing any prompts for a project, **ask the user whether any attribute, look, or concept must never appear** (body types, styles, moods, clothing, tones). If they name things, those go on the project's **banned list**: the concept's entire vocabulary is excluded from every prompt **in any form — including negations and near-synonyms** (naming a concept summons it, even as "not X"). You steer with richer positive description of what you *do* want instead. If they say there's nothing — proceed normally, and start the list the moment a render surfaces an unwanted attribute; once on the list, it stays banned for every remaining segment.
+
 ## Motion & Performance craft (how to write Section 5)
 Animation wants **exaggeration and timing**, not restraint (the opposite of realistic UGC). Thread the animation principles:
 - **Squash & stretch** — compress on impact/landing, stretch on a jump; keep the character's volume.

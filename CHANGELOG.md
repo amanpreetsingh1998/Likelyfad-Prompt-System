@@ -4,6 +4,23 @@ All notable changes to this system are documented here. Format follows [Keep a C
 
 ## [Unreleased]
 
+## ai-animation@1.3.0 — 2026-07-23
+Calibration from the first real music-video production run (prompt-side; playback validation pending).
+### Changed
+- **Cut pacing inverted** (`delivery/music-video.md`): a **per-shot ceiling (~1.5s, no lingering)** replaces the old cuts-per-segment cap — 10+ cuts per segment is normal; long lyric lines are covered in multiple angles of the same action, never held. Each segment pre-declares a two-half **split fallback**, fired only if the render smears.
+- **Timing authority**: SRT lyric timestamps are the **master clock** (cuts land where words land); the beat grid is secondary. Ceiling violations are repaired by **subdividing the shot in place** — downstream lyric-locked timestamps never move.
+- **Fast edit ≠ fast characters**: the Format line now splits editing energy (fast punchy hard cuts) from character motion (calm, believable, slightly slow-motion) — omitting the split makes characters frantic.
+- **Per-shot anchors**: every shot line opens with its thread's grade token and closes with exactly one `Camera:` move; grades double as story-thread markers (one locked grade per location/timeline thread).
+### Added
+- **Multi-character method** (`chassis.md`): per-character @-tag + description + identity lock ("in every shot they appear in"), an explicit "These are N distinct characters…" disambiguation line, generic-extras rule (no identity bleed into crowds), and **story names never enter prompts** — @-tags only.
+- **Banned-vocabulary discipline** (`chassis.md`): **ask the user up front** whether anything must never appear; if yes, that concept's entire vocabulary is excluded from every prompt in any form (including negations and near-synonyms) — steer with richer positive description; the list grows when a render misbehaves.
+- **Sequenced product reveal** (`delivery/music-video.md`): product incidental at natural scale through the body (wording in References + Setup + Closing); the label/hero framing gets one dedicated slow close-out segment; all other props affirmatively unlabeled (readable prop text garbles).
+- **Per-segment delivery ritual** (`delivery/music-video.md`): rolling "Locked:" ledger, complete prompt every time (never fragments), numbered asset lines (`1 — @image_1 — file (role)`), Notes block (risks, playback watch-list, split fallback, next-segment preview), a content-filter pre-check, and audit-don't-reassure against the numbered rulebook.
+- Model layer (`models/seedance.md`): new symptom→fix rows — wrong attribute recurring (vocabulary ban), identity bleed into extras, product scale inflation / label garble, readable prop text; smeared-segment fix now points to the split fallback.
+- Example (`examples/pixar-disney-music-video.md`) rewritten to v2 demonstrating all of the above (12-shot fast-cut segment + ledger + notes ritual).
+### Fixed
+- Marketplace manifest: `ai-ugc` version synced to 1.0.1 (was lagging at 1.0.0).
+
 ## ai-animation@1.2.0 — 2026-07-14
 ### Added
 - **Beat-cut music-video mode** (`references/delivery/music-video.md`) — the main path for **full songs** (built from the team's SRT idea): a finished song + **SRT timestamped lyrics** + brief + images → per-segment prompts whose scenes **hard-cut in time with the beat and the lyrics**, with **no lip-sync**.

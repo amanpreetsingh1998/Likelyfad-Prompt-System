@@ -1,8 +1,8 @@
 ---
 name: ai-animation
 description: Use this skill whenever the user wants animated video-ad prompts — Pixar/Disney-style 3D (and, later, other animation styles) short ads where animated characters or objects tell a product story for TikTok, Reels, or Shorts. Also covers MUSIC from a finished song — beat-cut music videos (song + SRT timestamps → scenes hard-cut to the beat and the lyrics, no lip-sync) and sung lip-sync (jingle ads, a character visibly singing). Trigger it when the user has a finished script (or finished song) + already-made images (a start frame, a character/character sheet, a product) and wants ready-to-paste AI video prompts. Targets ByteDance Seedance 2.0 (image-to-video); the craft is model-agnostic.
-version: 1.2.0
-updated: 2026-07-14
+version: 1.3.0
+updated: 2026-07-23
 ---
 
 # AI Animation — animated video-ad prompt skill
@@ -14,7 +14,7 @@ You turn a **finished script + already-made images (character, scene, product) +
 - **Don't:** plan the script, choose the marketing angle, generate images/characters, or compose music/vocals — those arrive already done (a separate front-half skill handles them; songs come finished, e.g. from Suno).
 
 ## Workflow (in order)
-1. **Absorb the full story** — the script, the characters, the product, the vibe, any context the user gives. Understand it before writing.
+1. **Absorb the full story** — the script, the characters, the product, the vibe, any context the user gives. Understand it before writing. **Ask up front whether anything must never appear** (attributes, body types, styles, moods) — if yes, that's the project's banned-vocabulary list. → `references/chassis.md` (Vocabulary discipline).
 2. **Pick the shape** — default to a single **≤15s multi-scene** generation (saves the video team time; Seedance carries one character across scenes and b-rolls without a fresh start frame each scene). Use a shorter single clip only when a shot must be generated alone. → `references/models/seedance.md`.
 3. **Map the scenes & performance** — per scene/beat: action, camera, motion (animation principles), and — for talking scenes — dialogue tied to words. → `references/chassis.md`. **Music job?** A full song + SRT (beat-cut video, no lip-sync) → `references/delivery/music-video.md` takes over timing. A character who must visibly sing → `references/delivery/singing.md`.
 4. **Write on the chassis** — @-tag every asset with its role, add the affirmative style anchor, fill the scene beats + voice/audio block. → `references/chassis.md` + `references/styles/pixar-disney-3d.md`.
@@ -37,8 +37,11 @@ You turn a **finished script + already-made images (character, scene, product) +
 - **Keep the Voice/Audio block self-contained** — it's the seam the singing layer plugs into (`references/delivery/singing.md`). Music is optional per brief (never a hard-locked "no music").
 - **Never ask the model to compose the singing.** The song arrives finished (like the images); the prompt lip-syncs to the supplied track — with the lyrics transcribed in the prompt, ≤14s per segment. (Why → `references/delivery/singing.md`.)
 - **Never paste the SRT into a video prompt.** The SRT is input for the prompt-writer — you compute the segment windows and rebased timestamps from it; the model gets only local timestamped beats. (How → `references/delivery/music-video.md`.)
+- **Story names never enter a prompt** — characters are referenced only as their @-tag ("the @image2 character"); names are conversation handles. With two+ characters, each gets its own identity lock + a "these are distinct characters" line. (→ `references/chassis.md`.)
+- **Respect the banned list.** A concept the user banned (or a render already got wrong) never appears in the prompt in any form — not even negated; steer with richer positive description. (→ `references/chassis.md`.)
 - **Don't put the model's name in the structure** — Seedance is a swappable detail.
 
 ## Output format (every time)
-1. A single fenced **code block containing only the prompt**.
-2. Below it: **Duration:** (the chosen length) and **Assets to use, in order:** (the tagged reference images; audio if any).
+1. A single fenced **code block containing only the prompt** — always the complete prompt, never a fragment or a "same as before, but…" diff.
+2. Below it: **Duration:** (the chosen length) and **Assets to use, in order:** as numbered lines — `1 — @image_1 — <filename> (role)` — the tagged reference images; audio if any.
+3. On multi-segment jobs (music videos): open with the "Locked:" ledger and close with the Notes block. → `references/delivery/music-video.md` (Per-segment delivery ritual).

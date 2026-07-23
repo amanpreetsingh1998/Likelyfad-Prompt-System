@@ -54,6 +54,10 @@ Seedance preserves a tagged start frame's subject, composition, and style, so do
 | Timing wanders off the supplied track | Attach the segment as a black-screen MP4 *video* reference instead of raw audio; keep it ≤13s. |
 | Extra music invented over a supplied track | State the role plainly: "@audio1 is the only music and the master timing." |
 | Shots morph/blend instead of hard-cutting | Write `hard cut to:` explicitly at each timestamp, with a distinct location/framing change per cut — near-identical shots invite morphing. |
-| Beat-cut segment comes out smeared/chaotic | Cap ~4–5 cuts per segment; slow the cadence (cut every 2 bars); move faster cutting to the edit. |
+| Beat-cut segment comes out smeared/chaotic | Fire the segment's pre-declared split fallback: two thematic halves as separate renders, same references + locks (→ `../delivery/music-video.md`). |
+| A wrong attribute keeps rendering (body type, style, mood) | Ban that concept's entire vocabulary from the prompt — including negations and near-synonyms — and describe the wanted attribute in richer positive detail (→ vocabulary discipline in `../chassis.md`). |
+| A tagged character's identity bleeds into background extras | Write extras explicitly generic ("a varied, generic background crowd of new incidental people") and keep the distinct-characters disambiguation line. |
+| Product inflates toward hero scale / label garbles in casual shots | Weave natural-scale wording ("small, casual, held naturally") into References + Setup + Closing; feature the label only in its one dedicated slow reveal segment, never at fast-cut speed. |
+| Readable text on props garbles | Make every prop affirmatively unlabeled/blank; any on-screen text belongs to the edit, not the generation. |
 
 *Confidence: durations / inputs / no-negative-field / native lip-sync are from Seedance / fal.ai docs; exact multi-scene counts and drift fixes are community-sourced starting points — calibrate against your own generations and fold wins back into this table.*
