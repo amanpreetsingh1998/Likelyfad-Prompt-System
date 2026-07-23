@@ -42,6 +42,14 @@ Calibration from the first real music-video production run (prompt-side; playbac
 - Worked sung example (`examples/pixar-disney-singing.md`, flagged v1 — test & calibrate): a 12s sung jingle ad + the full-song segment pattern.
 - Model layer additions (`models/seedance.md`): supplied-audio mechanics + three new symptom→fix rows (misheard lyrics, timing drift, invented extra music).
 
+## ai-song@1.0.0 — 2026-07-14
+### Added
+- New **`ai-song`** skill: Suno song-prompt system — turns a finished ad script (often **3 hooks + 1 body**) into a paste-ready Suno package (a Style field + the script sung **verbatim** inside Suno's structure tags + settings). The words are locked verbatim; the skill formats and styles only.
+- Current model layer: **Suno v5.5, Pro tier** (`references/models/suno.md`) — the two-field split, structure tags, Exclude Styles & sliders, Personas, the **identical-body method** (one master + Replace Section, so each hook is regenerated in-context and matches the body), the **long-song method** (Extend + Get Whole Song + free-DAW cleanup, since Studio is Premier-only), brand-name phonetic respelling, and a symptom→fix table.
+- Default sound layer **`high-energy-nonrap`** (fast, driving, gapless, sung — never rap): a genre menu with BPM anchors and an audience→genre hint map. The sound layer is swappable.
+- Chassis tuned for songs: format-don't-write, the verbatim rule, structure-tagging from the whole script, the 2–3-treatment sound-decision step, and a small **visual/timing seed** to hand off to the animation skill.
+- A worked example (flagged v1 — test & calibrate) and repo plumbing: registered in `AGENTS.md`, `CLAUDE.md`, and the plugin marketplace manifest.
+
 ## ai-animation@1.0.0 — 2026-07-13
 ### Added
 - New **`ai-animation`** skill: animated video-ad prompt system — turns a finished script + already-made images (character, scene, product) into ready-to-paste **image-to-video** prompts. **Pixar/Disney 3D** is the first style; the style layer is swappable and a singing/voice delivery mode is planned on top.

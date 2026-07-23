@@ -5,11 +5,12 @@
 ## Skills available
 - **`ai-ugc`** — turns a script + reference images into ready-to-paste realistic-UGC talking-head video-ad prompts. Current model: Google Gemini Omni. **Entry point: `skills/ai-ugc/SKILL.md`.**
 - **`ai-animation`** — turns a finished script + already-made images (character, scene, product) into ready-to-paste **animated** video-ad prompts (Pixar/Disney 3D first). Also handles music from a **finished song**: **beat-cut music videos** (song + SRT timestamps → scenes hard-cut to the beat and lyrics, no lip-sync) and **sung lip-sync** (jingle ads, a character visibly singing). Current model: ByteDance Seedance 2.0 (image-to-video). **Entry point: `skills/ai-animation/SKILL.md`.**
+- **`ai-song`** — turns a finished ad script (often **3 hooks + 1 body**) into ready-to-paste **Suno** song prompts (a Style field + the script sung **verbatim** inside structure tags + settings) for a high-energy, non-rap brand song. Current model: Suno v5.5 (Pro). **Entry point: `skills/ai-song/SKILL.md`.**
 
 ## How to operate
-1. Pick the skill that matches the job (realistic talking-head → `ai-ugc`; animated → `ai-animation`) and open its `SKILL.md`, then follow it.
+1. Pick the skill that matches the job (realistic talking-head video → `ai-ugc`; animated video → `ai-animation`; a Suno song from an ad script → `ai-song`) and open its `SKILL.md`, then follow it.
 2. It will tell you which files to read **on demand** — the current model file, the chosen style, examples. Load them only when you reach that step.
-3. The user gives you a **script + reference images** (and, for animation, story context); you output ready-to-paste prompts in the skill's required format (a code block + a duration + an ordered asset list).
+3. The user hands over the inputs (a **script + reference images** for video — plus story context for animation; an **ad script** for a song); you output ready-to-paste prompts in the skill's required format.
 
 ## Hard rules
 - Do **not** preload the whole repo. Open the skill entry, then page in detail as needed.

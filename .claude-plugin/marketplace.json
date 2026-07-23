@@ -14,6 +14,12 @@
       "source": "./skills/ai-animation",
       "version": "1.3.0",
       "description": "Turn a finished script + already-made images (character, scene, product) into ready-to-paste animated video-ad prompts (Pixar/Disney 3D), including beat-cut music videos (finished song + SRT) and sung lip-sync jingles. Current model: ByteDance Seedance 2.0 image-to-video (swappable)."
+    },
+    {
+      "name": "ai-song",
+      "source": "./skills/ai-song",
+      "version": "1.0.0",
+      "description": "Turn a finished ad script (often 3 hooks + 1 body) into ready-to-paste Suno song prompts — a Style field + the script sung verbatim inside structure tags + settings — for a high-energy, non-rap brand song. Current model: Suno v5.5 Pro (swappable)."
     }
   ]
 }
