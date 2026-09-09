@@ -4,6 +4,23 @@ All notable changes to this system are documented here. Format follows [Keep a C
 
 ## [Unreleased]
 
+## ai-song@1.1.0 — 2026-09-09
+Fixes a contradiction that made the entry point prescribe a method its own model file had already retired. The 2026-07 calibration demoted **Replace Section** after it failed on a real leading-hook swap, but `SKILL.md` and the worked example still walked through it — so an agent reading only the entry point got the failed method.
+### Changed
+- **`SKILL.md`** now states the calibrated Job A: one master (Hook 1 + Body) that is also ad #1, a **Voice** made from that take, Hooks 2 and 3 as **standalone mini-generations with that Voice locked** and the **hook-arc style string**, then a join to the **one exported body WAV** in an external editor on the first downbeat. Replace Section is called out as demoted so nobody reaches for it again.
+- **New must-never: every keeper gets an editor pass.** The Song Editor Crop / Remove Section is the deterministic, credit-free gap fix; prompt wording only raises the odds. Short hook generations always pad an instrumental tail — crop rather than re-roll.
+- **Output format** updated: hook variants are standalone mini-generation blocks, and the assembly runbook covers master, Voice, mini-gens, editor pass, and the drop-join.
+- **Naming synced to the current UI** — Personas are called **Voice**.
+- **`models/suno.md`**: the "hooks don't match the body" symptom row no longer recommends the demoted method; the open render test is updated from the Replace-Section question (now answered) to whether the mini-gen plus Voice-lock plus drop-join holds tempo, key, and voice across a set.
+- **`examples/three-hooks-one-body.md`** rewritten to v2 on the calibrated method — standalone hook blocks with `[End]`, the hook-arc string, and a seven-step assembly runbook.
+
+## Repo maintenance — 2026-09-09
+### Fixed
+- **README rewritten.** It described only `ai-ugc` and told readers animated styles could not be done yet, which had been untrue since July. It now covers all three skills, both animation styles, and the music and song paths.
+- **Release tags created.** The changelog promised `<skill>@<version>` tags and none existed. All past releases are now tagged at the commit where that version's content was final. Note that `ai-song@1.0.0` absorbed the July render calibration without a version bump, so its tag points at the merged calibrated state rather than the day it was introduced.
+- **All three skills registered as Agent Skills.** Only `ai-song` had a symlink under `.claude/skills/`; `ai-ugc` and `ai-animation` now do too, so each auto-loads outside this repo.
+- **Prompt log brought current.** It held a single June row. It now carries the findings from the July Suno build and the July animation music-video run, plus an explicit "awaiting their first real run" table so untested work is never mistaken for calibrated work.
+
 ## ai-animation@1.4.0 — 2026-09-09
 Adds the **direct 3D explainer** style (the "Zack D" style) as a **second, separate style path** inside `ai-animation` — not a variant of Pixar/Disney 3D, and not related to the song or music layers. Ported from a production-calibrated external style guide (v2.0, 2026-09-02) that was itself adapted from this skill and refined on observed render failures.
 ### Added

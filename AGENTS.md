@@ -19,4 +19,4 @@
 
 *(Claude Code reads `CLAUDE.md`, which points here. Codex, Cursor, Copilot, and others read this file directly.)*
 
-*(For Claude Code users, `ai-song` is also registered as a proper Agent Skill via `.claude/skills/ai-song` — a symlink to `skills/ai-song`, so there is one source of truth. It auto-loads on trigger or via `/ai-song`. To use it outside this repo: copy the `skills/ai-song` folder into `~/.claude/skills/` for personal use in any project, or zip it and upload as a custom skill on claude.ai.)*
+*(For Claude Code users, all three skills are registered as proper Agent Skills via `.claude/skills/ai-ugc`, `.claude/skills/ai-animation`, and `.claude/skills/ai-song` — symlinks into `skills/`, so there is one source of truth. Each auto-loads on trigger or via `/ai-ugc`, `/ai-animation`, `/ai-song`. To use one outside this repo: copy its folder from `skills/` into `~/.claude/skills/` for personal use in any project, or zip it and upload as a custom skill on claude.ai.)*

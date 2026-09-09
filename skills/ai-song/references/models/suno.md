@@ -40,7 +40,7 @@ Each tag on its **own line**, immediately before that section's lyrics. Tags are
 A **Persona/Voice** captures a chosen take's vocal + style so later generations sing in the same voice. Create from your best take — **song page ⋯ menu** (own generations only; the button is NOT in the Song Editor); **set gender explicitly**. Reuse it for every hook generation and every extend so the voice never drifts. An **Extend** inherits the source track's voice/key/tempo automatically — the no-Persona fallback.
 
 ## The editor pass — the deterministic gap-killer (Pro)
-Every prompt-side gap technique only raises the odds. After **Get Whole Song**, play the track once and use the **Song Editor**: **Crop / Remove Section** deletes instrumental intros, mid-song breaks, and outro fades **credit-free**; **Replace Section** regenerates a bad span. Budget one editor pass per keeper before exporting WAV — any gap that survives the prompts dies here, not in the video edit.
+Every prompt-side gap technique only raises the odds. After **Get Whole Song**, play the track once and use the **Song Editor**: **Crop / Remove Section** deletes instrumental intros, mid-song breaks, and outro fades **credit-free**; **Replace Section** regenerates a bad span *mid-song* (this narrow repair use still works — it's the **leading-hook swap** that was demoted below). Budget one editor pass per keeper before exporting WAV — any gap that survives the prompts dies here, not in the video edit.
 
 ## Brand names & tricky words — fix BEFORE generating (permanent after)
 Suno sings from spelling, not meaning, so coined brand names mispronounce.
@@ -82,8 +82,8 @@ No Studio warp-lock on Pro, so **minimize drift natively, then clean up in a fre
 | Short standalone gen (a hook clip) pads instrumental after `[End]` | Expected — crop to the last word in the editor; `ends cold on the final word` in Style + `instrumental outro, fade out` in Exclude shortens the tail. |
 | Created/swapped section starts at full energy instead of building | A section renders at the energy its style string describes — use the hook-arc string (Job A), not the full-throttle body string. |
 | Song builds gradually but a replacement section slams in hot | Same fix: two-string pattern (Job A) — arc string for the hook, throttle string for the body. |
-| Hooks don't match the body | Don't render hooks separately — use the master + Replace Section (Job A). |
-| Voice changes across hooks/extends | Lock one Persona + frozen sliders across the whole set; re-paste Style each extend. |
+| Hooks don't match the body | Render each hook as a standalone mini-gen with the master's **Voice** selected (or Extend-harvest), then join it to the ONE exported body WAV in the editor (Job A). Never leave a hook unanchored — an unanchored render shares no tempo, key, or voice. |
+| Voice changes across hooks/extends | Lock one **Voice** (Persona) + frozen sliders across the whole set; re-paste Style each extend. |
 | Tempo/voice drift on a long song | Fewer extends; re-paste Style incl. BPM/key each extend; DAW Change-Tempo + crossfade on cleanup. |
 
 ## Confirm in-app (all limits were sourced from docs behind a fetch block — verify on the real account)
@@ -91,7 +91,7 @@ No Studio warp-lock on Pro, so **minimize drift natively, then clean up in a fre
 - Whether **Voice cloning** and any monthly **download cap** apply on Pro.
 - **Get Whole Song** reliably reassembles a 4+ extend chain without re-charging.
 - Current **stem credit costs**; that **Custom Models** is Premier-only.
-- **The render-1 test:** does Replace Section cleanly swap a variable-length leading hook while keeping the body consistent + the seam seamless?
+- **Answered on the 2026-07 build:** Replace Section does **not** cleanly swap a variable-length leading hook — demoted (see Job A). **The open render test now:** does standalone mini-gen + Voice-lock + editor drop-join hold tempo, key, and voice well enough that the three ads sound like one set?
 
 *Confidence: field separation, structure tags, Exclude Styles, sliders, Personas, Extend/Get-Whole-Song, and Pro-vs-Premier tiering are corroborated across multiple 2026 sources; exact numeric limits and the identical-body/long-song seam behavior are starting points to calibrate on your own account — fold wins back into this table.*
 
