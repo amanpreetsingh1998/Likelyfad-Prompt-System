@@ -17,7 +17,22 @@ Fixes a contradiction that made the entry point prescribe a method its own model
 ## Repo maintenance — 2026-09-09
 ### Fixed
 - **README rewritten.** It described only `ai-ugc` and told readers animated styles could not be done yet, which had been untrue since July. It now covers all three skills, both animation styles, and the music and song paths.
-- **Release tags created.** The changelog promised `<skill>@<version>` tags and none existed. All past releases are now tagged at the commit where that version's content was final. Note that `ai-song@1.0.0` absorbed the July render calibration without a version bump, so its tag points at the merged calibrated state rather than the day it was introduced.
+- **Release tag map established** (see below). The changelog promised `<skill>@<version>` tags and none existed. Every past release now has a defined target commit. **The tags could not be pushed from the session that created them** — GitHub refused the `refs/tags/*` push with a 403 while branch pushes to the same repo succeeded, so that session's credential was scoped to branch refs only. Anyone with normal push rights can create them in one paste from a local clone:
+
+  ```
+  git tag -a ai-ugc@1.0.0       9526422 -m "ai-ugc 1.0.0 — initial realistic-UGC talking-head skill (Gemini Omni)."
+  git tag -a ai-ugc@1.0.1       5918bcd -m "ai-ugc 1.0.1 — Voice composed per creator, locked per project."
+  git tag -a ai-animation@1.0.0 e993fc9 -m "ai-animation 1.0.0 — Seedance image-to-video, Pixar/Disney 3D style."
+  git tag -a ai-animation@1.1.0 2c7ef74 -m "ai-animation 1.1.0 — sung lip-sync delivery layer."
+  git tag -a ai-animation@1.2.0 1073948 -m "ai-animation 1.2.0 — beat-cut music-video mode (song + SRT)."
+  git tag -a ai-animation@1.3.0 e639d35 -m "ai-animation 1.3.0 — calibration from the first real music-video run."
+  git tag -a ai-song@1.0.0      bd6a43d -m "ai-song 1.0.0 — Suno song prompts from ad scripts, incl. the 2026-07 calibration."
+  git tag -a ai-animation@1.4.0 cb97c95 -m "ai-animation 1.4.0 — direct 3D explainer (the Zack D style) as a separate path."
+  git tag -a ai-song@1.1.0      b5b553a -m "ai-song 1.1.0 — entry point realigned to the calibrated Job A method."
+  git push origin --tags
+  ```
+
+  Each target is the commit where that version's content was **final**, not necessarily where it was introduced. `ai-song@1.0.0` is the clearest case: it absorbed the July render calibration without a version bump, so its tag points at the merged calibrated state.
 - **All three skills registered as Agent Skills.** Only `ai-song` had a symlink under `.claude/skills/`; `ai-ugc` and `ai-animation` now do too, so each auto-loads outside this repo.
 - **Prompt log brought current.** It held a single June row. It now carries the findings from the July Suno build and the July animation music-video run, plus an explicit "awaiting their first real run" table so untested work is never mistaken for calibrated work.
 
