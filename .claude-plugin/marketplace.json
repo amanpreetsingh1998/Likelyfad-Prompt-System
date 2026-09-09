@@ -12,8 +12,8 @@
     {
       "name": "ai-animation",
       "source": "./skills/ai-animation",
-      "version": "1.3.0",
-      "description": "Turn a finished script + already-made images (character, scene, product) into ready-to-paste animated video-ad prompts (Pixar/Disney 3D), including beat-cut music videos (finished song + SRT) and sung lip-sync jingles. Current model: ByteDance Seedance 2.0 image-to-video (swappable)."
+      "version": "1.4.0",
+      "description": "Turn a finished script or narration + already-made images into ready-to-paste animated video prompts in two separate styles: Pixar/Disney 3D ads and the direct 3D explainer (the \"Zack D\" style, fast hard-cut explainers with narration in post). Also beat-cut music videos (finished song + SRT) and sung lip-sync jingles. Current model: ByteDance Seedance 2.0 (swappable)."
     },
     {
       "name": "ai-song",

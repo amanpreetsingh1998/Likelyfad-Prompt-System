@@ -4,6 +4,21 @@ All notable changes to this system are documented here. Format follows [Keep a C
 
 ## [Unreleased]
 
+## ai-animation@1.4.0 — 2026-09-09
+Adds the **direct 3D explainer** style (the "Zack D" style) as a **second, separate style path** inside `ai-animation` — not a variant of Pixar/Disney 3D, and not related to the song or music layers. Ported from a production-calibrated external style guide (v2.0, 2026-09-02) that was itself adapted from this skill and refined on observed render failures.
+### Added
+- **New style** (`styles/direct-3d-explainer.md`): semi-realistic game-engine-like characters, cyan-void explainer space or locations built from 3–5 primitives, bright flat phone-readable lighting, a **colour-ownership table** (colour explains function, not decoration), material rules, and this style's camera menu (quick push, snap reframe, locked when the mechanism evolves). Includes a Pixar-vs-explainer delta table and a "writer-notes are never prompt text" guard.
+- **New delivery layer** (`delivery/explainer.md`): the **new-fact cadence** (a readable visual fact every 0.8–1.8s, and the insight that a fact is not always a cut), the two visual modes (narrative reenactment vs. explanatory demonstration), the **input contract**, the narration **clause map → beat manifest → rebase → assembly** workflow, the **script-to-visual translation table**, narration-in-post audio, a QC checklist, and a symptom→fix table.
+- **Worked example** (`examples/direct-3d-explainer.md`, flagged v1 — test & calibrate): a 24s narrated explainer as three 8s clips, demonstrating both visual modes, the beat manifest, and the two standing lines this style adds.
+- **Step 0 style router** in `SKILL.md` — a decision table plus trigger vocabulary so the Pixar and explainer paths are never blended or co-loaded.
+### Changed
+- **Model layer** (`models/seedance.md`) gained style-agnostic craft hoisted out of the guide, which improves Pixar work too: **one owner per attribute**; the **multi-panel/collage limitation** (an `@image` tag addresses the whole image, never a region — never promise region-picking); final-frame reuse nuance; **motion safeguards** (exact repeated-action counts, cloth and flexible geometry staging, particle/field distribution); the **anatomy and handedness protocol** (camera side, body side, limb chain, grip, active finger, resting hand); expanded **text and label** craft; a **mature/sensitive context** checklist; and nine new symptom→fix rows.
+- **Chassis** (`chassis.md`): motion and camera craft is now explicitly **style-scoped** (the animation-principle doctrine is Pixar's, not universal — only "stabilized, purposeful, one move per beat" is universal); added one-owner-per-attribute, the narrated-explainer delivery mode, a mature-context section, and a note that the explainer style legitimately adds Background-rule and Lighting/colour lines to the prompt.
+- **`SKILL.md`** description widened from ads-only to ads **and** explainers, with "Zack D" as trigger vocabulary; camera must-never rescoped per style; new must-nevers for attribute ownership, left/right auditing, and not promising generated typography; explainer fields added to the output format.
+- Repo plumbing updated: `AGENTS.md`, `CLAUDE.md`, and the plugin marketplace manifest.
+### Notes
+- Provenance is handled deliberately: the file is named for the **format**, not the creator, and the style file carries the source guide's disclaimer — apply the observable grammar, never copy any channel's name, branding, voice, characters, or individual scenes.
+
 ## ai-animation@1.3.0 — 2026-07-23
 Calibration from the first real music-video production run (prompt-side; playback validation pending).
 ### Changed
