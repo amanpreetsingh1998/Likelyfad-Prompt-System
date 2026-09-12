@@ -20,7 +20,7 @@ Scripts usually arrive as **3 hooks + 1 body**. The deliverable is **3 songs** �
 1. **Absorb the whole script** — the words, the emotion, the energy, the brand, the CTA. Confirm the **3 hooks + 1 body** split (which lines are each), or the plain structure if it's not that shape.
 2. **Agree the sound** — propose **2–3 distinct fast, non-rap sonic treatments** (genre + vocal + BPM), led by the script's vibe (audience as a hint). The user picks one for the set. → `references/styles/high-energy-nonrap.md`.
 3. **Map the structure** — derive the **full section structure from the whole script** (however many verses/choruses it has), tag it verbatim, and run a **brand-name pronunciation** pass. → `references/chassis.md` + `references/models/suno.md`.
-4. **Write the master + variants** — the Style field, the verbatim tagged Lyrics (Hook 1 + Body), the settings, and Hook 2 / Hook 3 as Replace-Section swap blocks. → `references/chassis.md` + the chosen style + `references/models/suno.md`.
+4. **Write the master + variants** — the Style field, the verbatim tagged Lyrics (Hook 1 + Body), the settings, and Hook 2 / Hook 3 as **standalone Voice-locked mini-generation blocks**. → `references/chassis.md` + the chosen style + `references/models/suno.md`.
 5. **Long songs** — if the script exceeds Suno's per-generation limits (~5,000-char lyrics / ~8 min), chunk it for **Extend + Get Whole Song**. → `references/models/suno.md`.
 6. **Deliver** — see Output format, including the assembly runbook and the visual/timing seed.
 
