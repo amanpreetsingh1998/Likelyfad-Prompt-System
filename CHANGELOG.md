@@ -4,6 +4,20 @@ All notable changes to this system are documented here. Format follows [Keep a C
 
 ## [Unreleased]
 
+## ai-ugc-seedance@1.0.0 — 2026-09-18
+A new, separate skill for **realistic UGC generated in Seedance 2.0**. `ai-ugc` stays the Gemini Omni skill. They are separate on purpose: Seedance's realistic and animated crafts obey different rules. The animation skill writes affirmative-only prompts, and the realistic production prompts use NOT-lists heavily.
+### Added
+- **Built from production prompts, not guides.** The rules come from the owner's production Seedance UGC prompts that rendered well. Where two published guides disagree with them, the production prompts win and the guide rule becomes a symptom→fix. Every rule is tagged **[proven]**, **[guide]**, or **[trial]**.
+- **Three guide rules overturned by production evidence:** prompt length (production ran ~600–1,500 words against a 280-word guide ceiling), negations (NOT-lists and `no 3D, no cartoon, no VFX` work on realistic UGC), and head/camera movement during spoken lines (word-pinned nods and slow push-ins rendered well). The guides' 5–10-word line limit is likewise a fix for mushy sync, not a limit.
+- **Chassis** (`references/chassis.md`): the 13-block order every production prompt followed. It covers per-hand jobs and screen sides, the alive block with a blink minimum from frame zero, timed beats with word-pinned performance, a maintain block that restates every lock, the closer, a speaking-rate ceiling (~3.5 words/second), and a 10-point audit.
+- **Model layer** (`references/models/seedance.md`): hard specs, reference-role phrasing (first frame, identity, held-position per sub-shot, label fidelity, timbre-only voice sample, extend-from-video), this skill's negation policy, text and label handling, and a symptom→fix table.
+- **Style** (`references/styles/raw-iphone-ugc.md`): four camera setups named by who holds the phone (friend-held, selfie, tripod, locked reaction), each committing to one camera truth, plus the locked look block.
+- **Delivery layers:** `dialogue.md` (verbatim lines, phonetic names, word-pinned gestures, the audio block, open vs closed cadence, the **LOCKED REGISTER + CRITICAL override** against script-driven tone drift), `clip-series.md` (planning 5–12s clips that stitch mid-sentence, continuity, internal hard cuts), and `trial-formats.md` (founder talking head, street interview, hands-only voiceover, two-person dialogue — all **[trial]**, never run in production).
+- **Examples** (flagged v1): friend-held with internal jump cuts, a tripod two-clip product series, and a locked reaction clip. Every brand, product, person, and script is invented.
+- Registered in `AGENTS.md`, `CLAUDE.md`, the plugin marketplace, the README, the prompt log, and `.claude/skills/ai-ugc-seedance`.
+### Changed
+- **README maintainer note:** "keep model names out of structure and naming" becomes "keep model-specific wording inside each skill's `references/models/` file". The owner allowed a model or tool name in a skill's own name on 2026-09-16, and this skill's name uses it.
+
 ## ai-song@1.1.0 — 2026-09-09
 Fixes a contradiction that made the entry point prescribe a method its own model file had already retired. The 2026-07 calibration demoted **Replace Section** after it failed on a real leading-hook swap, but `SKILL.md` and the worked example still walked through it — so an agent reading only the entry point got the failed method.
 ### Changed

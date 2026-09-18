@@ -11,6 +11,7 @@
 | You want | Skill | Goes into |
 |---|---|---|
 | A real-looking person talking to camera, selfie-style, holding your product | **`ai-ugc`** | Google Gemini Omni |
+| The same kind of real-looking creator video, filmed as a selfie, by a friend, or on a tripod, including an ad split into several clips | **`ai-ugc-seedance`** | ByteDance Seedance 2.0 |
 | An animated ad, glossy Pixar/Disney look, a character telling your product story | **`ai-animation`** (Pixar path) | ByteDance Seedance 2.0 |
 | A fast explainer — semi-realistic 3D, hard cuts, a new fact every second, voiceover on top. **The "Zack D" style** | **`ai-animation`** (explainer path) | ByteDance Seedance 2.0 |
 | A music video cut to the beat of a song you already have | **`ai-animation`** (music-video mode) | ByteDance Seedance 2.0 |
@@ -22,7 +23,7 @@ Everything works for **any brand or product**. Vertical, short-form, for TikTok 
 ## 🚫 What it can't do yet (don't force it)
 - Any model other than the ones listed above. The model is a swappable layer, so ask the admin to add one.
 - Animation styles beyond Pixar/Disney 3D and the direct 3D explainer.
-- Realistic UGC clips longer than 10 seconds, or with more than one person on screen.
+- In `ai-ugc` (Gemini Omni): realistic clips longer than 10 seconds, or with more than one person on screen. (`ai-ugc-seedance` goes up to 15 seconds per clip.)
 - Writing your script, choosing your marketing angle, or making your images. Those arrive already done.
 
 Need something not on the list? **Ask the admin.** Forcing it produces a bad prompt.
@@ -49,6 +50,21 @@ Need something not on the list? **Ask the admin.** Forcing it produces a bad pro
 - **Product image** — a clean product photo so the label doesn't distort.
 
 **Step 3 — give it the one line you want to film.** It must fit **4, 6, 8, or 10 seconds, never longer than 10.** You get the full prompt for that line. Repeat for each line.
+
+### 📱 `ai-ugc-seedance` — realistic creator videos in Seedance
+**Step 1 — give it the whole script,** every clip, and say who the person is and how they talk (e.g. "sassy know-it-all", "calm expert").
+
+**Step 2 — give it your images and label each one.**
+- **First-frame image** — the exact opening shot.
+- **Face image** — keeps the same person in every clip.
+- **Product label close-up** — if a product is in the shot, so the label stays right.
+- **Voice sample (optional)** — a 3–8 second MP3 of the voice you want. It copies the sound of the voice, not the words.
+
+**Step 3 — say who is holding the phone:** the person themselves (selfie), a friend across from them, or a tripod.
+
+**Step 4 — tell it anything that must never appear.** You get a clip plan first, then one full prompt per clip, each with its length and a numbered list of files to upload in order.
+
+Formats marked **trial** (founder talking head, street interview, hands-only voiceover, two people talking) haven't been tested yet. Check the result closely and tell the admin how it came out.
 
 ### 🎬 `ai-animation` — animated ads and explainers
 **Step 1 — say which style you want.** This matters more than anything else. **Pixar/Disney** is the glossy cartoon-mascot look. The **"Zack D" style** is the fast semi-realistic explainer with hard cuts and narration added afterwards. They are separate systems and must never be blended, so the skill will ask if it isn't clear.
@@ -101,4 +117,4 @@ You'll get a **prompt in a grey box**, plus the **length** and a **numbered list
 
 ---
 
-<sub><b>For maintainers:</b> internals live in <code>skills/&lt;skill&gt;/</code> (entry: <code>SKILL.md</code>); agent instructions in <code>AGENTS.md</code>; research and version history in <code>docs/</code> and <code>CHANGELOG.md</code>. Keep model names out of structure and naming — each model is a swappable layer under <code>skills/&lt;skill&gt;/references/models/</code>. Log every notable generation in <code>docs/prompt-log.md</code> and fold the lesson into that model's symptom→fix table.</sub>
+<sub><b>For maintainers:</b> internals live in <code>skills/&lt;skill&gt;/</code> (entry: <code>SKILL.md</code>); agent instructions in <code>AGENTS.md</code>; research and version history in <code>docs/</code> and <code>CHANGELOG.md</code>. Keep model-specific wording inside each skill's <code>references/models/</code> file — each model is a swappable layer, and the chassis and styles stay model-agnostic. (A skill may carry a model or tool name in its own name, allowed since 2026-09-16, e.g. <code>ai-ugc-seedance</code>.) Log every notable generation in <code>docs/prompt-log.md</code> and fold the lesson into that model's symptom→fix table.</sub>

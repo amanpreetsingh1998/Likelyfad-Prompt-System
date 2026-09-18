@@ -10,6 +10,12 @@
       "description": "Turn a script + reference images into ready-to-paste realistic UGC talking-head video-ad prompts. Current model: Google Gemini Omni (swappable)."
     },
     {
+      "name": "ai-ugc-seedance",
+      "source": "./skills/ai-ugc-seedance",
+      "version": "1.0.0",
+      "description": "Turn a script + reference images (+ an optional voice sample) into ready-to-paste realistic UGC video-ad prompts for ByteDance Seedance 2.0 — selfie, friend-held, or tripod creator videos, including multi-clip ad series stitched in the edit. Built on production prompts that rendered well. Current model: ByteDance Seedance 2.0 (swappable)."
+    },
+    {
       "name": "ai-animation",
       "source": "./skills/ai-animation",
       "version": "1.4.0",
