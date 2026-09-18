@@ -24,7 +24,11 @@ Production ads were built as **series of 5–12s clips** stitched in the edit. T
   ```
   [HARD CUT — instant frame-to-frame transition at 2.5s, slight 5-10 degree angle pivot, same composition scale, NO zoom, NO scale change, NO motion blur, NO dissolve, NO fade]
   ```
-- **A tighter frame on a punchline** is a deliberate exception: `5-20 percent tighter framing, head and upper chest fill more of the frame` or `10-15% tighter framing on <character>`. Say how much tighter.
+- **A tighter frame on a punchline** is a deliberate exception. Don't write "NO scale change" on a cut that changes scale. Use the production templates:
+  ```
+  [HARD CUT to MEDIUM CLOSE-UP — 20 percent tighter framing, above-torso composition, head and upper chest fill more of the frame, <camera> angle preserved. Instant frame-to-frame transition, NO motion blur, NO dissolve, NO fade.]
+  [HARD CUT back to MEDIUM SHOT — resets to the original framing, slightly wider than the previous close-up, <camera> angle preserved. Instant frame-to-frame transition.]
+  ```
 - **A scene change inside one clip** (another pose or another spot in the same room) gets its own held-position reference image, `matching @image3`.
 - **Prop continuity across cuts:** state the prop's state in each cut's line, e.g. `Bottle still in his right hand, towel still around his neck`, or `The towel is no longer visible in this cut`.
 - **Cuts are silent**, and the voice carries across them.

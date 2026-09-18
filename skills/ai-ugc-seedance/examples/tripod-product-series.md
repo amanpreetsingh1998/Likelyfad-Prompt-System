@@ -10,7 +10,7 @@
 | 1 | 5s | "Everyone tells you to drink more water for your skin," | open, mid-sentence |
 | 2 | 6s | "...but mine only calmed down when I stopped washing it twice a night." | closed |
 
-**Inputs assumed:** `@image1` the first frame at the bathroom counter; `@image2` her identity reference; `@image3` a close-up of the HALDEN bottle label; `@audio1` a 5-second MP3 voice sample.
+**Inputs assumed:** `@image1` the first frame at the bathroom counter, with the bottle visible on the LEFT side of the frame as the viewer sees it (the side is read off this image, not worked out from the hand); `@image2` her identity reference; `@image3` a close-up of the HALDEN bottle label; `@audio1` a 5-second MP3 voice sample.
 
 ## Clip 1 (ends open)
 ```
@@ -23,7 +23,7 @@ same person across frames. Dynamic energy. Flat unimpressed know-better register
 
 UGC creator, iPhone front camera filming her from a tripod on the bathroom counter, low angle looking up, vertical 9:16, subject fills upper 2/3 of frame, NOT handheld, NOT cinematic, NOT polished, NOT color graded. Unfiltered realism, raw iPhone recording quality. Fast-paced TikTok ad. 5 seconds, 9:16.
 
-She leans slightly toward the counter, both hands fully visible at chest height, exactly matching @image1. Oversized grey sweatshirt, hair pulled into a loose low bun with strands falling at the sides, bare face with a few natural freckles, small silver hoop earrings. Her left hand holds the HALDEN bottle on the LEFT SIDE of frame from viewer perspective at chest height, label facing camera, exactly as shown in @image3. The bottle stays on the LEFT SIDE of frame the entire 5 seconds, NEVER moves to the right side of frame, NEVER swaps to the other hand. The bottle is held loosely as a casual extension of the hand, NOT a focus, NOT a hero presentation, NOT lifted toward camera. Her right hand is free on the RIGHT SIDE of frame and gestures with the dialogue.
+She leans slightly toward the counter, both hands fully visible at chest height, exactly matching @image1. Oversized grey sweatshirt, hair pulled into a loose low bun with strands falling at the sides, bare face with a few natural freckles, small silver hoop earrings. Her left hand holds the HALDEN bottle on the LEFT SIDE of frame from viewer perspective at chest height, exactly as shown in @image1, label facing camera and matching @image3. The bottle stays on the LEFT SIDE of frame the entire 5 seconds, NEVER moves to the right side of frame, NEVER swaps to the other hand. The bottle is held loosely as a casual extension of the hand, NOT a focus, NOT a hero presentation, NOT lifted toward camera. Her right hand is free on the RIGHT SIDE of frame and gestures with the dialogue.
 
 Background matches @image1: white square wall tiles, a round mirror edge at the top of frame, a folded towel on a hook to the right, soft window daylight from the left. No other people in the frame. The scene is alive from frame zero through the entire 5 seconds with continuous natural micro-motion, active before the first word: loose strands shift with her breathing, chest rises and falls, natural eye blinking distributed across the clip with at least 3 natural blinks including one within the first 1 second, eyebrow micro-flickers, mouth-corner micro-tensions between words. Her free hand moves with the rhythm of the dialogue and settles back near the counter between gestures, NOT held rigid, NOT theatrical. NOT frozen, NOT static.
 

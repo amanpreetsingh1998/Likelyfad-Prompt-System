@@ -8,8 +8,9 @@ Each setup commits to one camera truth. **Never mix handheld and tripod in one c
 ### A. Friend-held, across from the subject [proven]
 The most-used setup. Someone off-frame films across a bench, table, or room. The friend is **never visible**.
 ```
-UGC creator, iPhone camera filmed by a friend sitting across the <bench/table/room>, vertical 9:16, subject fills upper 2/3 of frame, eye level, natural handheld shake from a real person holding a phone, NOT tripod, NOT selfie, NOT cinematic, NOT polished, NOT color graded, NOT HDR, NOT oversaturated, NOT oversharpened. Unfiltered realism, raw iPhone recording quality. Fast-paced TikTok ad with <N> internal hard cuts. <N> seconds, 9:16.
+UGC creator, iPhone camera filmed by a friend sitting across the <bench/table/room>, vertical 9:16, subject fills upper 2/3 of frame, eye level, natural handheld shake from a real person holding a phone, NOT tripod, NOT selfie, NOT cinematic, NOT polished, NOT color graded, NOT HDR, NOT oversaturated, NOT oversharpened. Unfiltered realism, raw iPhone recording quality. <Fast-paced / Deliberate-paced> TikTok ad with <N> internal hard cuts. <N> seconds, 9:16.
 ```
+- **The pace word follows the register,** and production used both: `Fast-paced` for quick creator energy, `Deliberate-paced` for weighty or slow delivery. Everything else in the camera line is locked.
 - **In the beats:** `Friend-held medium shot, camera locked` during lines, plus `The friend-held camera bob is natural and continuous from a real person holding a phone from frame zero.`
 - **Audio:** `close-mic sounding as if recorded on iPhone front camera at arm's length distance from the friend holding the phone`.
 
@@ -22,7 +23,7 @@ UGC creator, iPhone front camera selfie aesthetic, vertical 9:16, subject fills 
 
 ### C. Tripod across the table, locked [proven]
 ```
-UGC creator, iPhone front camera filming her from a tripod across the <table>, <low angle looking up / eye level>, vertical 9:16, subject fills upper 2/3 of frame, NOT handheld, NOT cinematic, NOT polished, NOT color graded. Unfiltered realism, raw iPhone recording quality. Fast-paced TikTok ad. <N> seconds, 9:16.
+UGC creator, iPhone front camera filming her from a tripod across the <table>, <low angle looking up / eye level>, vertical 9:16, subject fills upper 2/3 of frame, NOT handheld, NOT cinematic, NOT polished, NOT color graded. Unfiltered realism, raw iPhone recording quality. <Fast-paced / Deliberate-paced> TikTok ad. <N> seconds, 9:16.
 ```
 - **In the beats:** `Locked tripod framing matching @image1`. Internal cuts pivot the angle 5–10° and never change scale.
 - **Audio:** `close-mic sounding as if recorded on iPhone front camera at tripod distance`.

@@ -19,7 +19,7 @@ You turn a **finished script + reference images (+ optional voice sample)** into
 1. **Absorb everything first.** The full script (every clip, not just the first), the persona, each reference image and what it shows, the voice sample if any. Ask up front what must **never** appear. → `references/chassis.md` (Inputs).
 2. **Pick the camera setup** — who is holding the phone: **selfie**, **friend-held**, or **tripod**. It sets the camera line, the micro-motion, and the NOT-list. → `references/styles/raw-iphone-ugc.md`.
 3. **Split into clips.** Most lines ship as **5–12s clips** in a series, each ending either **mid-thought** or **closed**, stitched in the edit. → `references/delivery/clip-series.md`.
-4. **Write each clip on the chassis** — the fixed block order, reference roles first, timed beats with the dialogue inline, then audio, look, maintain, closer. → `references/chassis.md` + `references/delivery/dialogue.md`.
+4. **Write each clip on the chassis** — the fixed block order, reference roles first, timed beats with the dialogue inline, then audio, look, maintain, closer. The first time you use a camera setup, read its example as well. → `references/chassis.md` + `references/delivery/dialogue.md` + the matching file in `examples/`.
 5. **Audit before delivering** — left/right, prop state per beat, word count of each clip against its duration, register lock, the closer. → `references/chassis.md` (Audit).
 6. **Deliver** — see Output format.
 

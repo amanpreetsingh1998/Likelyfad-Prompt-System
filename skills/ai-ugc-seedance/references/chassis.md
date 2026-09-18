@@ -7,6 +7,7 @@ Every production prompt that worked used the **same block order**. Keep it. Earl
 - **Each reference and its one job:** first frame · character identity · a held-position/pose image for a later beat · product label close-up · location · voice sample.
 - **The persona:** age range, look, accent, the register (e.g. "sassy know-it-all", "blunt no-nonsense expert", "flat deadpan").
 - **What must never appear** — ask up front. Anything named is excluded in every clip.
+- **Objects the script names but the references don't show** (a line says "pillow" and no pillow is in the scene): ask before adding or substituting one. Never let the words and the action disagree, like saying "pillow" while spraying a blanket.
 - **Which camera setup** (selfie / friend-held / tripod) → `styles/raw-iphone-ugc.md`.
 
 ## The block order [proven]
@@ -32,7 +33,8 @@ One sentence stack: device + who films + angle + framing + motion truth + the NO
 ### 4. Subject block — the person and exactly what each hand does
 - Match the reference: `sits on a gym bench between sets, matching @image1`.
 - Wardrobe, hair, skin, makeup, jewellery in concrete detail — **the same wording in every clip of the series**.
-- **Each hand gets a job, and a side:** "her left hand holds … on the LEFT SIDE of frame from viewer perspective … her right hand is free and gestures". If both hands are empty, say so: `Both hands are completely empty throughout. No bottle, no phone, no product anywhere in frame.`
+- **Each hand gets a job, and a side:** "her <hand> holds … on the <LEFT/RIGHT> SIDE of frame from viewer perspective … her other hand is free and gestures". If both hands are empty, say so: `Both hands are completely empty throughout. No bottle, no phone, no product anywhere in frame.`
+- **Read the frame side off the first-frame image — never derive it from the hand.** A person facing the camera shows their right hand on the viewer's LEFT, but front-camera footage is often mirrored, so the same hand can appear on either side. Look at where the object sits in `@image1` as the viewer sees it, write that side, and add `exactly as shown in @image1`. If there's no first frame, or it's unclear, ask. The side of the frame is what locks placement; the hand's name is secondary. [proven for pinning; the mirror caution is from a fresh-agent test, 2026-09-18]
 - **Props on the table** are named and pinned: `scene dressing only, NOT touched, NOT picked up`. Count unique objects: `Only ONE <object> exists in the scene.`
 - **The product, when held:** incidental by default — `held loosely as a casual extension of the hand … NOT a focus, NOT a hero presentation`. The label faces camera; the side never changes. (Exact label handling → `models/seedance.md`, Text and labels.)
 
@@ -97,9 +99,9 @@ No music, no logo, no text on screen, no subtitles.
 
 ## Audit — before delivering any clip
 1. Every asset has a role line; one asset per attribute; the voice sample has the timbre-only clause.
-2. **Left/right** is the same in the subject block, every beat, and the maintain block.
+2. **Left/right** is read off `@image1` and is the same in the subject block, every beat, and the maintain block.
 3. Each prop's state is stated per beat and again in maintain; unique objects are counted.
-4. Dialogue is **verbatim** from the script; numbers spelled out; brand names phonetically spelled if hard to say.
+4. Every object the dialogue names is in the scene, or the user was asked. Dialogue is **verbatim** from the script; numbers spelled out; brand names phonetically spelled if hard to say.
 5. The cut count in the camera line equals the number of `[HARD CUT]` lines; cuts are declared silent.
 6. The blink minimum matches the duration.
 7. Words per second fit the duration.

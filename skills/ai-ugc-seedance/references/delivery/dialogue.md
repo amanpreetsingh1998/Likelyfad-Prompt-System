@@ -20,6 +20,7 @@ She says: "<line>." On "<word>," her right hand makes a small natural emphasis f
 - **Channels:** hands (with side and height: "at chest height"), eyebrows, mouth corners, chin, eyes (to camera, a brief drift away and back), lean, shrug, exhale.
 - **Scale words keep it real:** `small`, `a fraction`, `tiny`, `natural`, and the `NOT theatrical, NOT a hero move` guard.
 - **Head motion on words is allowed.** Nods, tilts and head shakes on spoken words rendered well [proven]. If a specific line's sync goes mushy, move that line's head motion to just before or after it [guide fix].
+- **Slow is allowed.** Deadpan or deliberate beats can run near 1 word/second; production's locked reaction clips did. Write the gaps as **held silences with durations**, so the model doesn't fill them.
 - **Resting baseline:** say where the hands return between gestures ("settles back to the lap baseline").
 - **Eyes:** default locked on camera. A drift away and back reads as thinking or remembering. Hold eye contact on the verdict.
 
