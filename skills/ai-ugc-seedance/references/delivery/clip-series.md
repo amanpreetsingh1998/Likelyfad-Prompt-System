@@ -1,6 +1,6 @@
 # Delivery — clip series (one ad across several generations)
 
-Production ads were built as **series of 5–12s clips** stitched in the edit. This is how they keep one continuous performance. Tags: **[proven]** · **[guide]** · **[trial]**.
+Production ads were built as **series of 5–12s clips** stitched in the edit. This is how they keep one continuous performance. Tags: **[proven]** production, 2+ ad series · **[one series]** production, a single ad series · **[guide]** published guides, uncontradicted · **[trial]** untested.
 
 ## Plan the series before writing any clip [proven]
 1. **Split the script by breath and meaning,** not by fixed length: one clip = one thought, or 2–5 short beats of one thought.
@@ -30,7 +30,7 @@ Production ads were built as **series of 5–12s clips** stitched in the edit. T
   [HARD CUT back to MEDIUM SHOT — resets to the original framing, slightly wider than the previous close-up, <camera> angle preserved. Instant frame-to-frame transition.]
   ```
 - **A scene change inside one clip** (another pose or another spot in the same room) gets its own held-position reference image, `matching @image3`.
-- **Prop continuity across cuts:** state the prop's state in each cut's line, e.g. `Bottle still in his right hand, towel still around his neck`, or `The towel is no longer visible in this cut`.
+- **Prop continuity across cuts:** state the prop's state in each cut's line, e.g. `<Prop> still in her <left/right> hand, <accessory> unchanged`, or `The <object> is no longer visible in this cut`.
 - **Cuts are silent**, and the voice carries across them.
 
 ## Series audit

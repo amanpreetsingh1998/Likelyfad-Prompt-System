@@ -1,6 +1,6 @@
 # Chassis — the prompt structure (every clip)
 
-Every production prompt that worked used the **same block order**. Keep it. Early blocks carry the most weight, so references and the camera identity come first; the closer comes last. Tags: **[proven]** from production prompts, **[guide]** from published guides, **[trial]** untested.
+Every production prompt that worked used the **same block order**. Keep it. Early blocks carry the most weight, so references and the camera identity come first; the closer comes last. Tags: **[proven]** production, 2+ ad series · **[one series]** production, a single ad series · **[guide]** published guides, uncontradicted · **[trial]** untested.
 
 ## Inputs — absorb before writing [proven]
 - **The whole script**, every clip of the series — the delivery of clip 3 depends on how clip 2 ended.
@@ -31,7 +31,7 @@ same person across frames. Dynamic energy. <Register> throughout.
 One sentence stack: device + who films + angle + framing + motion truth + the NOT-list + realism line + pace/cut line + duration + ratio. Templates per setup → `styles/raw-iphone-ugc.md`. Always state the **number of internal hard cuts** here if there are any ("with two internal hard cuts").
 
 ### 4. Subject block — the person and exactly what each hand does
-- Match the reference: `sits on a gym bench between sets, matching @image1`.
+- Match the reference: `sits on <the sofa / bench / chair>, matching @image1`.
 - Wardrobe, hair, skin, makeup, jewellery in concrete detail — **the same wording in every clip of the series**.
 - **Each hand gets a job, and a side:** "her <hand> holds … on the <LEFT/RIGHT> SIDE of frame from viewer perspective … her other hand is free and gestures". If both hands are empty, say so: `Both hands are completely empty throughout. No bottle, no phone, no product anywhere in frame.`
 - **Read the frame side off the first-frame image — never derive it from the hand.** A person facing the camera shows their right hand on the viewer's LEFT, but front-camera footage is often mirrored, so the same hand can appear on either side. Look at where the object sits in `@image1` as the viewer sees it, write that side, and add `exactly as shown in @image1`. If there's no first frame, or it's unclear, ask. The side of the frame is what locks placement; the hand's name is secondary. [proven for pinning; the mirror caution is from a fresh-agent test, 2026-09-18]

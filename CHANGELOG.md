@@ -4,10 +4,15 @@ All notable changes to this system are documented here. Format follows [Keep a C
 
 ## [Unreleased]
 
+## ai-animation@1.4.1 — 2026-09-18
+Wording-only patch.
+### Changed
+- **`models/seedance.md`:** the "negated words backfire" rule now states its scope. It applies to animated and stylized prompts, and points to `ai-ugc-seedance`, whose realistic production prompts use NOT-lists. This stops an agent "fixing" one skill against the other.
+
 ## ai-ugc-seedance@1.0.0 — 2026-09-18
 A new, separate skill for **realistic UGC generated in Seedance 2.0**. `ai-ugc` stays the Gemini Omni skill. They are separate on purpose: Seedance's realistic and animated crafts obey different rules. The animation skill writes affirmative-only prompts, and the realistic production prompts use NOT-lists heavily.
 ### Added
-- **Built from production prompts, not guides.** The rules come from the owner's production Seedance UGC prompts that rendered well. Where two published guides disagree with them, the production prompts win and the guide rule becomes a symptom→fix. Every rule is tagged **[proven]**, **[guide]**, or **[trial]**.
+- **Built from production prompts, not guides.** The rules come from the owner's production Seedance UGC prompts that rendered well. Where two published guides disagree with them, the production prompts win and the guide rule becomes a symptom→fix. Every rule is tagged by the breadth of its evidence: **[proven]** (seen across at least two separate production ad series), **[one series]** (a single series: likely sound, less tested), **[guide]**, or **[trial]**. The council found that the first draft had tagged single-series techniques as proven.
 - **Three guide rules overturned by production evidence:** prompt length (production ran ~600–1,500 words against a 280-word guide ceiling), negations (NOT-lists and `no 3D, no cartoon, no VFX` work on realistic UGC), and head/camera movement during spoken lines (word-pinned nods and slow push-ins rendered well). The guides' 5–10-word line limit is likewise a fix for mushy sync, not a limit.
 - **Chassis** (`references/chassis.md`): the 13-block order every production prompt followed. It covers per-hand jobs and screen sides, the alive block with a blink minimum from frame zero, timed beats with word-pinned performance, a maintain block that restates every lock, the closer, a speaking-rate ceiling (~3.5 words/second), and a 10-point audit.
 - **Model layer** (`references/models/seedance.md`): hard specs, reference-role phrasing (first frame, identity, held-position per sub-shot, label fidelity, timbre-only voice sample, extend-from-video), this skill's negation policy, text and label handling, and a symptom→fix table.

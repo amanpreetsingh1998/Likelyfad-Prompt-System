@@ -1,15 +1,15 @@
 # Delivery — dialogue, performance, and the audio block
 
-How spoken lines are written into the beats, and how the voice is directed. Tags: **[proven]** · **[guide]** · **[trial]**.
+How spoken lines are written into the beats, and how the voice is directed. Tags: **[proven]** production, 2+ ad series · **[one series]** production, a single ad series · **[guide]** published guides, uncontradicted · **[trial]** untested.
 
 ## Lines
-- **Verbatim from the script.** Never reword. Lines of 11–14 words rendered well in production [proven]. The guides' 5–10-word rule is a **fix** for mushy sync, not a limit.
-- **Numbers spelled out**, the way they're said: `twenty dollars`, `two for one`. Where a homophone is possible, say so: `spoken as the word "four", NOT as a numeral, NOT as "for"` [proven].
-- **Hard names are spelled phonetically**, and the spaces are explained as articulation cues [proven]:
+- **Verbatim from the script.** Never reword. Most production lines were short, but lines of 11–14 words also rendered well [proven]. The guides' 5–10-word rule is a **fix** for mushy sync, not a limit.
+- **Numbers spelled out**, the way they're said: `twenty dollars`, `two for one`. Where a homophone is possible, say so: `spoken as the word "four", NOT as a numeral, NOT as "for"` [one series].
+- **Hard names are spelled phonetically**, and the spaces are explained as articulation cues [one series]:
   > The brand name is written as "<Pho net ic>" — the spaces are articulation cues for the audio engine, NOT audible pauses. Spoken as one continuous flowing <N>-syllable word "<phonetic>" with no gap between the chunks.
 - **A line can span a beat or break across beats.** Trailing `...` marks a line that continues mid-thought.
-- **Commas that must be heard:** `the comma is rendered as a tiny natural break in speech, NOT a long pause, just enough separation that "<word>" and "<word>" land as two distinct words` [proven].
-- **Non-verbal reactions** get their own tag: `[Reaction sound, non-verbal]: soft approving "Mmm" through closed lips` [proven].
+- **Commas that must be heard:** `the comma is rendered as a tiny natural break in speech, NOT a long pause, just enough separation that "<word>" and "<word>" land as two distinct words` [one series].
+- **Non-verbal reactions** get their own tag: `[Reaction sound, non-verbal]: soft approving "Mmm" through closed lips` [one series].
 - **Tagged format**, if you use one, is `[Dialogue/Casual, English]: "…"`, with the delivery in the label and never in parentheses after the quote [guide]. Production also wrote `He says: "…"` inline [proven]. Both work; pick one per project.
 
 ## Word-pinned performance [proven]
@@ -29,7 +29,7 @@ Write it after the beats, in this order:
 1. **Voice spec:** the timbre-only clause when `@audio1` is used, then age, gender, accent, pace. For example, `Late-20s American woman, natural everyday American accent, fast confident TikTok-creator pace`.
 2. **Mic and room:** `Clear and close-mic sounding as if recorded on iPhone front camera at <arm's length / tripod distance>. Slight room reverb from the <room>, NOT dry studio sound.`
 3. **Register** in one line, then **per line:** emphasis (`Slight emphasis on…` / `Heavy emphasis on…`), pitch (`voice goes up slightly on…`), and **cadence** on the last word.
-4. **Held silences with durations:** `Held silence of 0.3 seconds after "<word>."`. Put an action inside a silence when it needs time, such as `this held silence is when she reaches off-frame and lifts the bottle into view`.
+4. **Held silences with durations** [one series]: `Held silence of 0.3 seconds after "<word>."`. Put an action inside a silence when it needs time, such as `this held silence is when she reaches off-frame and lifts the bottle into view`.
 5. **Cut sound:** `The internal hard cuts are silent — NO transition sound, NO clicks, NO whoosh, dialogue continues seamlessly across the cuts.`
 6. **Action sounds or their absence:** a sound that should exist (`soft natural slicing sound … subordinate to the voice`), or one that must not (`The bottle toss is silent — NO impact thud, NO whoosh`).
 
@@ -38,7 +38,7 @@ Write it after the beats, in this order:
 - **Closed:** `Closed-cadence finality on "<word>" — voice settles down, sentence terminates naturally. The audio should sound like a period, NOT a comma. Soft natural exhale audible after "<word>".`
 - **A hard close** adds: `NOT a soft conversational fade — the period is hard.`
 
-## Register lock — when the words would pull the delivery [proven]
+## Register lock — when the words would pull the delivery [one series]
 The model reads tone from the words. When a line would naturally sound different from the brief (a product spec read as a sales pitch, a prescription read as calm advice), add both blocks:
 ```
 LOCKED REGISTER — <register> delivery throughout the ENTIRE clip from the first word to the last word. <What the register is and who it's aimed at.> NOT softer, NOT more conversational, NOT casual, NOT <the specific wrong readings>. The <register> IS the default state and does NOT shift.

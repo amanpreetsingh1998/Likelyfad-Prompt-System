@@ -4,7 +4,7 @@
 >
 > **Not the same file as `ai-animation/references/models/seedance.md`.** Same model, different craft. The animation file says *affirmative phrasing only — negated words backfire*; that holds for stylized 3D. The owner's **realistic** production prompts use NOT-lists heavily and rendered well. Neither rule is universal — never port one into the other.
 
-Tags: **[proven]** production prompts · **[guide]** published guides, uncontradicted · **[trial]** untested.
+Tags: **[proven]** production, 2+ ad series · **[one series]** production, a single ad series · **[guide]** published guides, uncontradicted · **[trial]** untested.
 
 ## Hard specs [guide]
 - **Duration:** 4–15s. Production clips ran **5–12s**; 15s is the ceiling, not the target.
@@ -22,10 +22,10 @@ Seedance does not infer an asset's job; the sentence you write is the role.
 | First frame (the clip starts from this exact composition) | `@image1 as the first frame.` | [proven] |
 | Identity only (face/look; scene may differ) | `@image2 as character face and identity reference across all angles.` | [proven] |
 | Location + framing + lighting | `@image1 as composition, location, lighting, and framing reference — match this exact <setting>, <camera angle>, <lighting>, <key objects>.` | [proven] |
-| Held position for one sub-shot | `@image3 as the <bottle-held-in-hand / pointing> pose reference for sub-shot two — <describe the pose>.` | [proven] |
+| Held position for one sub-shot | `@image3 as the <held-in-hand / pointing> pose reference for sub-shot two — <describe the pose>.` | [one series] |
 | Product label fidelity | `@image4 as the product label fidelity reference — <label transcribed>. The label and all text stays stable and readable throughout, NOT warping, NOT distorting, NOT morphing across the cuts.` | [proven] |
 | Voice timbre only | `voice timbre references @audio1 — extract voice character only (tone, pitch, accent, room acoustic), do NOT copy or reproduce any dialogue or words from @audio1. The character speaks ONLY the dialogue written in this prompt, in the voice style of @audio1.` | [proven] |
-| Extend a previous clip | `@video1 as the video to extend from — continue from the exact last frame.` | [proven] |
+| Extend a previous clip | `@video1 as the video to extend from — continue from the exact last frame.` | [one series] |
 | Camera movement copy | `completely reference all camera movement effects from @video1` | [guide] |
 
 - **First frame vs identity are different jobs** — "@image1 as the first frame" is not "the woman from @image1". Use both when you have both. [guide]
@@ -53,10 +53,10 @@ Always say what you **do** want as well. **If a render shows the very thing a NO
 - Production prompts **did** put nods, tilts and head shakes on spoken words and kept a slow push-in over a line, and rendered well [proven]. The guides forbid it. If sync goes mushy, see the table.
 
 ## Text and labels
-- **Transcribe the label word for word**, top to bottom, in the subject block and again in maintain, plus `NO text hallucination, NO alternate spelling, NO additional text` [proven].
+- **Transcribe the label word for word**, top to bottom, in the subject block and again in maintain, [proven], plus `NO text hallucination, NO alternate spelling, NO additional text` [one series].
 - Give the label its own reference image and keep the label **facing camera** [proven].
 - Add `show all details of the <product> faithfully` [guide, used in production].
-- Printed shirts: `graphic facing forward, NOT mirrored, NOT reversed, NOT flipped` [proven].
+- Printed shirts: `graphic facing forward, NOT mirrored, NOT reversed, NOT flipped` [one series].
 - Perfect generated typography is still not guaranteed. If a label must be pixel-exact, plan a post replacement [guide].
 
 ## Symptom → fix table
@@ -65,13 +65,13 @@ Always say what you **do** want as well. **If a render shows the very thing a NO
 | Person looks frozen or mannequin-like | Add the alive block from frame zero, with a stated blink minimum | [proven] |
 | Product jumps hands or sides of frame | Pin hand + side (viewer perspective), `NEVER swaps`, restate in maintain | [proven] |
 | Label garbles or changes | Label reference image + full transcription + slower hand movement; post replacement if critical | [proven] / [guide] |
-| Shirt graphic or text mirrored | `NOT mirrored, NOT reversed, NOT flipped` | [proven] |
-| Delivery drifts to the script's natural tone | LOCKED REGISTER block + CRITICAL override line | [proven] |
-| Brand or herb name mispronounced | Phonetic spelling with the articulation-cue note | [proven] |
-| "four" heard as "for", numbers garbled | Spell numbers out; add `NOT as a numeral, NOT as "for"` | [proven] |
+| Shirt graphic or text mirrored | `NOT mirrored, NOT reversed, NOT flipped` | [one series] |
+| Delivery drifts to the script's natural tone | LOCKED REGISTER block + CRITICAL override line | [one series] |
+| Brand or product name mispronounced | Phonetic spelling with the articulation-cue note | [one series] |
+| "four" heard as "for", numbers garbled | Spell numbers out [proven]; add `NOT as a numeral, NOT as "for"` [one series] | mixed |
 | Cut adds a whoosh or click | `The internal hard cuts are silent — NO transition sound` | [proven] |
-| A thrown or set-down object makes noise | State its silence explicitly | [proven] |
-| Duplicate objects appear | Count line: `Only ONE <object> exists in the scene.` | [proven] |
+| A thrown or set-down object makes noise | State its silence explicitly | [one series] |
+| Duplicate objects appear | Count line: `Only ONE <object> exists in the scene.` | [one series] |
 | Clip ends too final (or too open) for the stitch | Specify cadence: comma vs period, soft inhale vs settled exhale | [proven] |
 | Lip-sync goes mushy | Shorten that line (5–10 words) or split the clip; remove head motion **during that line only**; lock the camera for it; front-facing | [guide] |
 | Audio goes mushy past ~8s | Split into two clips and stitch | [guide] |
@@ -80,5 +80,5 @@ Always say what you **do** want as well. **If a render shows the very thing a NO
 | Dialogue cut off at the end | Move it earlier, shorten it, or extend the duration | [guide] |
 | Looks commercial, not phone-shot | Camera identity NOT-list + 2 micro-details; remove "cinematic/professional" | [guide] / [proven] |
 | Face drifts across cuts | `same person across frames` + identity reference + fewer cuts | [guide] |
-| The negated thing appears ("NOT busy gym" → busy gym) | Rewrite that line affirmatively and re-roll | [trial] |
+| The negated thing appears ("NOT a crowded room" → a crowded room) | Rewrite that line affirmatively and re-roll | [trial] |
 | Audio distorts or has artefacts | Re-roll; if it persists, generate silent and add voiceover in post | [guide] |
