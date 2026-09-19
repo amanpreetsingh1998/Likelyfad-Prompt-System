@@ -8,7 +8,7 @@ Every production prompt that worked used the **same block order**. Keep it. Earl
 - **The persona:** age range, look, accent, the register (e.g. "sassy know-it-all", "blunt no-nonsense expert", "flat deadpan").
 - **What must never appear** — ask up front. Anything named is excluded in every clip.
 - **Objects the script names but the references don't show** (a line says "pillow" and no pillow is in the scene): ask before adding or substituting one. Never let the words and the action disagree, like saying "pillow" while spraying a blanket.
-- **Which camera setup** (selfie / friend-held / tripod) → `styles/raw-iphone-ugc.md`.
+- **Which camera setup** (selfie / friend-held, or its locked-for-a-reaction variant / tripod) → `styles/raw-iphone-ugc.md`.
 
 ## The block order [proven]
 
@@ -48,6 +48,7 @@ Background matches @image1: <every visible element: walls, shelves, window, plan
 The scene is alive from frame zero through the entire <N> seconds with continuous natural micro-motion — active before the first word, NOT starting only when dialogue begins. <hair/locs> shift slightly with her breathing, chest rises and falls, natural eye blinking distributed across the clip with at least <N/2> natural blinks, including one blink within the first 1 second, eyebrow micro-flickers, mouth-corner micro-tensions between words, subtle facial muscle tensions and releases, tiny breath-driven shifts in the shoulders. <camera motion truth: "The friend-held camera bob is natural and continuous from frame zero."> NOT frozen, NOT static.
 ```
 - **Blinks:** about one per 2 seconds, stated as a minimum.
+- **Eyes closed for the whole clip** (concentrating, tasting): replace the blink minimum with a counted **eyelid-flutter** minimum (`at least <N/2> visible eyelid flutters while closed`) so the alive rule still holds.
 - **Hands at rest:** give a **resting baseline** ("hands clasped in her lap") and say hands only lift for the named gesture moments, then settle back — `NOT held rigid, NOT theatrical, NOT constantly moving`.
 
 ### 7. Timed beats — the dialogue lives here
@@ -79,7 +80,7 @@ Only when a line would naturally be read in a different tone than the brief. →
 
 ### 12. Maintain block — restate every lock
 ```
-Maintain her identity from @image2, same outfit, same face, same hair, same build, same <setting> from @image1 throughout. Voice character continuity from @audio1, timbre only, NOT content. <prop rules per beat, with sides and NEVER-swaps>. <label exact, "NO text hallucination, NO alternate spelling">. <count rules>. Realistic hand anatomy with five fingers, stable proportions, sharp focus on face.
+Maintain her identity from @image2, same outfit, same face, same hair, same build, same <setting> from @image1 throughout. Voice character continuity from @audio1, timbre only, NOT content. <prop rules per beat, with sides and NEVER-swaps>. <label exact> <optional, [one series]: "NO text hallucination, NO alternate spelling">. <count rules>. Realistic hand anatomy with five fingers, stable proportions, sharp focus on face.
 ```
 Repeating the locks here is deliberate: the production prompts restate every prop, side, and count rule a second time at the end.
 
@@ -89,8 +90,8 @@ No music, no logo, no text on screen, no subtitles.
 ```
 
 ## Locked vs. variable
-- **Locked for the project (verbatim in every clip):** the camera identity line for the chosen setup, the look block, the voice spec, the wardrobe description, the closer.
-- **Variable per clip:** duration, beats and timecodes, dialogue, word-pinned gestures, prop state, cut count, the register (only when the script turns), the ending (open/closed).
+- **Locked for the project (verbatim in every clip):** the camera line's **core** (who holds the phone, angle, framing, motion truth, the NOT-list, the realism line), the look block, the voice spec, the wardrobe description, the closer.
+- **Variable per clip:** the camera line's **suffix** (pace word, internal cut count, duration, ratio), beats and timecodes, dialogue, word-pinned gestures, prop state, the register (only when the script turns), the ending (open/closed).
 
 ## Length and pace [proven]
 - **Length follows specificity.** Production prompts ran ~600–1,500 words and rendered well; the guides' 120–280-word ceiling is not used here. Don't pad — but don't cut a lock to save words.
@@ -101,7 +102,7 @@ No music, no logo, no text on screen, no subtitles.
 1. Every asset has a role line; one asset per attribute; the voice sample has the timbre-only clause.
 2. **Left/right** is read off `@image1` and is the same in the subject block, every beat, and the maintain block.
 3. Each prop's state is stated per beat and again in maintain; unique objects are counted.
-4. Every object the dialogue names is in the scene, or the user was asked. Dialogue is **verbatim** from the script; numbers spelled out; brand names phonetically spelled if hard to say.
+4. Every object the dialogue names is in the scene, or the user was asked. Dialogue is **verbatim** from the script except the three listed exceptions (numbers as words, flagged phonetic respellings, continuation ellipses), each shown to the user.
 5. The cut count in the camera line equals the number of `[HARD CUT]` lines; cuts are declared silent.
 6. The blink minimum matches the duration.
 7. Words per second fit the duration.

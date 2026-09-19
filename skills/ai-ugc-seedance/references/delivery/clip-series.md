@@ -11,14 +11,14 @@ Production ads were built as **series of 5–12s clips** stitched in the edit. T
 4. **Deliver the plan first:** clip number, duration, lines, open or closed.
 
 ## Continuity between clips [proven]
-- **Same wording, every clip:** the wardrobe description, the background block, the look block and the camera line are pasted word for word.
+- **Same wording, every clip:** the wardrobe description, the background block, the look block and the camera line's **core** are pasted word for word. The camera line's suffix (pace, cut count, duration) changes per clip.
 - **Start where the last clip ended:** open the next clip's subject block in that state, e.g. `lips already parted with the post-inhale anticipation from the previous beat, eyebrows already in the scolding state`.
 - **Name the register's origin:** `continuing directly from the previous clip's "<last word>" close, no register reset`.
 - **First frame per clip:** a still for each clip keeps composition exact. When a clip needs the previous clip's exact last frame, extend from video instead: `@video1 as the video to extend from — continue from the exact last frame.`
 - **Hard cuts between clips** don't need the previous clip's last frame. Identity and background references plus identical wording are enough [guide].
 
 ## Hard cuts inside one clip [proven]
-- Up to **4 internal hard cuts** in a 10s clip rendered well.
+- Up to **4 internal hard cuts** in a 10s clip rendered well [one series]; 1–2 cuts per clip is seen across series [proven].
 - The camera line states the count: `with three internal hard cuts`.
 - Each cut is its own bracketed line:
   ```

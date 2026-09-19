@@ -27,7 +27,7 @@
 - One reference image per person, each with an identity role line.
 - They **take turns**, never overlap. Cut to the speaker each time (over-the-shoulder, favouring the speaker); reactions go between lines, not during them.
 - About 0.5 seconds of pause between speakers.
-- **Proven related case:** production did run a two-person scene where **only one person speaks** and the other is described as `silent throughout the entire clip, no dialogue at any point`. That rendered well. Real back-and-forth dialogue has not been tested.
+- **Related production case [one series, 1 prompt]:** production did run a two-person scene where **only one person speaks** and the other is described as `silent throughout the entire clip, no dialogue at any point`. That rendered well. Real back-and-forth dialogue has not been tested.
 
 ## Hybrid: on-screen lines plus voiceover [trial]
 **Use for:** long explanations. A speaker on screen for the hook and the sign-off, with hands or product B-roll plus a voiceover in the middle.

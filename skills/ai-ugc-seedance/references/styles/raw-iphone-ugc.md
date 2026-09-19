@@ -11,7 +11,8 @@ The most-used setup. Someone off-frame films across a bench, table, or room. The
 UGC creator, iPhone camera filmed by a friend sitting across the <bench/table/room>, vertical 9:16, subject fills upper 2/3 of frame, eye level, natural handheld shake from a real person holding a phone, NOT tripod, NOT selfie, NOT cinematic, NOT polished, NOT color graded, NOT HDR, NOT oversaturated, NOT oversharpened. Unfiltered realism, raw iPhone recording quality. <Fast-paced / Deliberate-paced> TikTok ad with <N> internal hard cuts. <N> seconds, 9:16.
 ```
 - **The pace word follows the register,** and production used both: `Fast-paced` for quick creator energy, `Deliberate-paced` for weighty or slow delivery. Everything else in the camera line is locked.
-- **In the beats:** `Friend-held medium shot, camera locked` during lines, plus `The friend-held camera bob is natural and continuous from a real person holding a phone from frame zero.`
+- **In the beats:** `Friend-held medium shot, camera locked` during lines, plus `The friend-held camera bob is natural and continuous from a real person holding a phone from frame zero.` [proven]
+- **Slow push-in variant** [one series, 4 prompts]: for a single speaker whose line should feel like it's drawing the viewer in. Production wording: `Medium shot across the <bench>, friend-held angle, slow push-in across the beat — camera creeps slightly closer naturally as he speaks.` Use it on one beat at a time, never with tripod or locked setups, and drop it for any line whose lip-sync comes back mushy.
 - **Audio:** `close-mic sounding as if recorded on iPhone front camera at arm's length distance from the friend holding the phone`.
 
 ### B. Selfie, arm's length [one series]
@@ -29,8 +30,8 @@ UGC creator, iPhone front camera filming her from a tripod across the <table>, <
 - **Audio:** `close-mic sounding as if recorded on iPhone front camera at tripod distance`.
 - Both hands are free, so give each one a job.
 
-### D. Across-table, camera locked for a reaction [one series]
-For tasting, smelling or rating: quiet reactions plus short verdicts.
+### D. Friend-held, locked for a reaction [one series]
+A variant of A: a friend holds the phone across the table and keeps it as still as a hand can. For tasting, smelling or rating: quiet reactions plus short verdicts.
 ```
 UGC creator, iPhone front camera aesthetic filming from across the table, vertical 9:16, subject fills upper 2/3 of frame, natural slight handheld shake, shallow depth of field. <N> seconds, 9:16.
 ```
@@ -46,7 +47,7 @@ Natural iPhone video aesthetic matching @image1: <warm indoor / cool gym / soft 
 - `no 3D, no cartoon, no VFX` is the photoreal lock. It reads as a negation, but on realistic UGC it works [proven].
 
 ## Scene realism details
-- **The environment moves:** dust motes in the light, hair shifting with breath, a towel moving with the body.
-- **Real rooms have sound.** The ambient block names 3–4 quiet sources and ends `Real <room> recorded on a phone, not isolated studio audio. No music score.`
+- **The environment moves** [proven]: dust motes in the light, hair shifting with breath, a towel moving with the body.
+- **Real rooms have sound** [proven]. The ambient block names 3–4 quiet sources and ends `Real <room> recorded on a phone, not isolated studio audio. No music score.`
 - **Micro-details that read as real phone footage** [guide], pick two per clip: `slightly overexposed` · `autofocus pulses` · `subtle autofocus hunt` · `ring light warmth` · `eyes squinting slightly in sunlight` · `slight wind in her hair` · `natural lighting imperfections`.
-- **Remove commercial words** from the whole prompt: *cinematic, professional, polished, commercial, studio* [guide].
+- **Never use commercial words as positive descriptors**: *cinematic, professional, polished, commercial, studio* [guide]. The negated forms in the camera templates (`NOT cinematic, NOT polished`) stay; they're proven.

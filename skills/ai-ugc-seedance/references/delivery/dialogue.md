@@ -3,7 +3,7 @@
 How spoken lines are written into the beats, and how the voice is directed. Tags: **[proven]** production, 2+ ad series · **[one series]** production, a single ad series · **[guide]** published guides, uncontradicted · **[trial]** untested.
 
 ## Lines
-- **Verbatim from the script.** Never reword. Most production lines were short, but lines of 11–14 words also rendered well [proven]. The guides' 5–10-word rule is a **fix** for mushy sync, not a limit.
+- **Verbatim from the script, with exactly three exceptions,** each shown to the user when used: (1) numbers written as words; (2) a hard brand or product name respelled phonetically; (3) `...` added where a line continues across clips. Nothing else changes. Never reword. Most production lines were short, but lines of 11–14 words also rendered well [proven]. The guides' 5–10-word rule is a **fix** for mushy sync, not a limit.
 - **Numbers spelled out**, the way they're said: `twenty dollars`, `two for one`. Where a homophone is possible, say so: `spoken as the word "four", NOT as a numeral, NOT as "for"` [one series].
 - **Hard names are spelled phonetically**, and the spaces are explained as articulation cues [one series]:
   > The brand name is written as "<Pho net ic>" — the spaces are articulation cues for the audio engine, NOT audible pauses. Spoken as one continuous flowing <N>-syllable word "<phonetic>" with no gap between the chunks.
@@ -45,5 +45,5 @@ LOCKED REGISTER — <register> delivery throughout the ENTIRE clip from the firs
 
 CRITICAL: the script for this clip ("<all lines>") would naturally read as <the wrong reading>. OVERRIDE that reading completely. The register is locked <register>. The script's words are the content, the <register> is the delivery, do NOT let the words drift the register toward their natural reading.
 ```
-- **Name who the energy lands on:** `The contempt lands on the system, NOT on the viewer.`
+- **Name who the energy lands on:** `The <frustration> lands on <the target>, NOT on the viewer.`
 - **Across a series,** name the clips the register carries over from: `the same register from the <earlier> clip carried directly forward, no register reset`.

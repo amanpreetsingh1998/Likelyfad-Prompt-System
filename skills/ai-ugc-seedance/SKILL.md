@@ -1,6 +1,6 @@
 ---
 name: ai-ugc-seedance
-description: Use this skill whenever the user wants realistic UGC video-ad prompts generated in ByteDance Seedance 2.0 — creator-style vertical videos where a real-looking person talks to camera (often holding or using a product) for TikTok, Reels, or Shorts, including multi-clip ad series stitched in the edit. Trigger it when the user has a script plus reference images (a first frame, a character/identity image, optionally a product label image and a voice sample) and is generating in Seedance. For realistic UGC in Google Gemini Omni use ai-ugc instead; for animated video use ai-animation.
+description: Use this skill whenever the user wants realistic UGC video-ad prompts generated in ByteDance Seedance 2.0 — creator-style vertical videos where a real-looking person talks to camera (often holding or using a product) for TikTok, Reels, or Shorts, including multi-clip ad series stitched in the edit. Trigger it when the user has a script plus reference images (a first frame, a character/identity image, a product label image whenever branded packaging is in shot, and optionally a voice sample) and is generating in Seedance. For realistic UGC in Google Gemini Omni use ai-ugc instead; for animated video use ai-animation.
 version: 1.0.0
 updated: 2026-09-18
 ---
@@ -13,13 +13,13 @@ You turn a **finished script + reference images (+ optional voice sample)** into
 
 ## What you do (and don't)
 - **Do:** absorb the whole script and every reference, pick the camera setup, split the script into clips, and write each clip as one complete prompt with timed beats, word-pinned performance, a full audio block, and the locks that stop drift.
-- **Don't:** write or rewrite the script's words, invent the persona, generate images, or choose the marketing angle. Never paste a brand name, product label, or price the user didn't give you.
+- **Don't:** write or rewrite the script's words (the three exceptions are in `references/delivery/dialogue.md`), invent the persona, generate images, or choose the marketing angle. Never paste a brand name, product label, or price the user didn't give you.
 
 ## Workflow (in order)
 1. **Absorb everything first.** The full script (every clip, not just the first), the persona, each reference image and what it shows, the voice sample if any. Ask up front what must **never** appear. → `references/chassis.md` (Inputs).
-2. **Pick the camera setup** — who is holding the phone: **selfie**, **friend-held**, or **tripod**. It sets the camera line, the micro-motion, and the NOT-list. → `references/styles/raw-iphone-ugc.md`.
+2. **Pick the camera setup** — who is holding the phone: **selfie**, **friend-held** (or its **locked-for-a-reaction** variant), or **tripod**. It sets the camera line, the micro-motion, and the NOT-list. → `references/styles/raw-iphone-ugc.md`.
 3. **Split into clips.** Most lines ship as **5–12s clips** in a series, each ending either **mid-thought** or **closed**, stitched in the edit. → `references/delivery/clip-series.md`.
-4. **Write each clip on the chassis** — the fixed block order, reference roles first, timed beats with the dialogue inline, then audio, look, maintain, closer. The first time you use a camera setup, read its example as well. → `references/chassis.md` + `references/delivery/dialogue.md` + the matching file in `examples/`.
+4. **Write each clip on the chassis** — the fixed block order, reference roles first, timed beats with the dialogue inline, then audio, look, maintain, closer. The first time you use a camera setup, read its example as well, where one exists (there's no selfie example yet). → `references/chassis.md` + `references/delivery/dialogue.md` + the matching file in `examples/`.
 5. **Audit before delivering** — left/right, prop state per beat, word count of each clip against its duration, register lock, the closer. → `references/chassis.md` (Audit).
 6. **Deliver** — see Output format.
 
@@ -29,7 +29,7 @@ You turn a **finished script + reference images (+ optional voice sample)** into
 - **For Seedance's hard specs, reference roles, and fixes:** `references/models/seedance.md` — input limits, durations, the reference-role phrasing, the voice-sample clause, this skill's negation policy, and the symptom→fix table. **(Swappable layer — when the model changes, only this file changes.)**
 - **For the look and the camera setup:** `references/styles/raw-iphone-ugc.md`.
 - **For any ad longer than one clip:** `references/delivery/clip-series.md`.
-- **Only for a format the production prompts never used** (founder talking head, street interview, hands-only voiceover, two-person dialogue): `references/delivery/trial-formats.md` — every format there is **[trial]**.
+- **Only for a format the production prompts never used** (founder talking head, street interview, hands-only voiceover, two-person dialogue, hybrid on-screen plus voiceover): `references/delivery/trial-formats.md` — every format there is **[trial]**.
 - **For ready-to-paste patterns:** `examples/friend-held.md` · `examples/tripod-product-series.md` · `examples/locked-reaction.md`.
 - **Never** load `docs/` — human background.
 
@@ -40,7 +40,7 @@ You turn a **finished script + reference images (+ optional voice sample)** into
 - **Never write a frozen scene.** Every clip carries the **alive block**: micro-motion from frame zero, a stated blink count, breath, and `NOT frozen, NOT static`. (→ `references/chassis.md`.)
 - **When a line would pull the delivery the wrong way, lock the register.** If the script's words would naturally read in a different tone than the brief, add the **LOCKED REGISTER** block and the **CRITICAL … OVERRIDE** line. [one series] (→ `references/delivery/dialogue.md`.)
 - **For clips that stitch into a series, never end ambiguously.** Each clip ends either **open** (comma cadence, soft inhale, face held mid-thought) or **closed** (period cadence, settled expression); state which in both the beat and the audio block. (→ `references/delivery/clip-series.md`.)
-- **Never omit the closer.** Every clip ends on `No music, no logo, no text on screen, no subtitles.` — it strips the model's defaults. (→ `references/models/seedance.md`.)
+- **Never omit the closer.** Every clip ends on `No music, no logo, no text on screen, no subtitles.`, which strips the model's added defaults: music, watermarks, captions. It targets overlays, not the product: production kept this exact closer on clips with a readable label in hand [proven], and the label is protected by the maintain block. Don't reword it. (→ `references/models/seedance.md`.)
 - **Never reuse a real brand, client, product, or person** in examples or defaults. Everything user-specific comes from the user, per project.
 
 ## Output format (every time)

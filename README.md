@@ -106,7 +106,7 @@ You'll get a **prompt in a grey box**, plus the **length** and a **numbered list
 - ❌ Don't write or rewrite the prompt yourself.
 - ❌ Don't mix the Pixar and explainer styles in one job.
 - ❌ Don't ask for styles or models that aren't built yet.
-- ❌ Don't exceed 10 seconds in one realistic UGC clip.
+- ❌ Don't exceed 10 seconds in one `ai-ugc` (Gemini Omni) clip. `ai-ugc-seedance` clips usually run 5–12 seconds, with 15 as the ceiling.
 - ❌ Don't skip the reference images.
 
 ---

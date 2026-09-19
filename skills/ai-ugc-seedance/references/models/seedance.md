@@ -1,6 +1,6 @@
 # Model layer — ByteDance Seedance 2.0 (realistic UGC)
 
-> The **swappable** file. Everything Seedance-specific for *realistic* UGC lives here. When the model changes, replace this file.
+> The **swappable** file. It owns this model's limits, reference-role phrasing, negation policy and fixes. When the model changes, start here, then check the chassis and style too: the `@image`/`@audio` handles and the NOT-heavy locked wording also carry Seedance habits.
 >
 > **Not the same file as `ai-animation/references/models/seedance.md`.** Same model, different craft. The animation file says *affirmative phrasing only — negated words backfire*; that holds for stylized 3D. The owner's **realistic** production prompts use NOT-lists heavily and rendered well. Neither rule is universal — never port one into the other.
 
@@ -15,7 +15,7 @@ Tags: **[proven]** production, 2+ ad series · **[one series]** production, a si
 - **Default platform assumption: Higgsfield.** Its editor pastes assets as `<<<image_1>>>` / `<<<avatar:…>>>` — those are copy artefacts. Always write `@image1`, `@image2`, `@audio1`, `@video1`.
 
 ## Reference roles — the phrasing is the instruction
-Seedance does not infer an asset's job; the sentence you write is the role.
+Seedance does not infer an asset's job; the sentence you write is the role. **Handles follow the actual upload order.** The numbers below are illustrative; if there's no pose image, the label image is `@image3`, not `@image4`. Never leave a gap in the numbering.
 
 | Role | Phrasing | Source |
 |---|---|---|
@@ -50,11 +50,12 @@ Always say what you **do** want as well. **If a render shows the very thing a NO
 - Front-facing or slight three-quarter; profile shots break sync.
 - The face should fill enough of the frame — mouths go vague in wide shots.
 - The first-frame / identity portrait matters: sharp, even light, mouth relaxed.
-- Production prompts **did** put nods, tilts and head shakes on spoken words and kept a slow push-in over a line, and rendered well [proven]. The guides forbid it. If sync goes mushy, see the table.
+- Production prompts **did** put nods, tilts and head shakes on spoken words and rendered well [proven]. Four prompts also kept a **slow push-in across a spoken beat** [one series]; the wording is in `styles/raw-iphone-ugc.md`, setup A. The guides forbid both. If sync goes mushy, see the table.
 
 ## Text and labels
 - **Transcribe the label word for word**, top to bottom, in the subject block and again in maintain, [proven], plus `NO text hallucination, NO alternate spelling, NO additional text` [one series].
 - Give the label its own reference image and keep the label **facing camera** [proven].
+- **Branded packaging in shot means a readable label image, or the user's transcription, is required.** Ask for one. If neither exists, keep the label turned away or out of focus, or plan a post-production replacement. Never invent label text.
 - Add `show all details of the <product> faithfully` [guide, used in production].
 - Printed shirts: `graphic facing forward, NOT mirrored, NOT reversed, NOT flipped` [one series].
 - Perfect generated typography is still not guaranteed. If a label must be pixel-exact, plan a post replacement [guide].
