@@ -1,9 +1,3 @@
-See @AGENTS.md for how to use this repo.
+See @AGENTS.md: it is the entry point for this repo.
 
-For realistic UGC talking-head video-ad prompts, the skill lives at `skills/ai-ugc/` — start at `skills/ai-ugc/SKILL.md` and load only the files it points to (keep context lean).
-
-For realistic UGC video-ad prompts that will be generated in **Seedance 2.0** (selfie, friend-held, or tripod creator videos, including multi-clip ad series), the skill lives at `skills/ai-ugc-seedance/` — start at `skills/ai-ugc-seedance/SKILL.md` and load only the files it points to. Use `ai-ugc` for Gemini Omni, `ai-ugc-seedance` for Seedance.
-
-For animated video prompts — **Pixar/Disney 3D** ads, the **direct 3D explainer / "Zack D" style** (fast hard-cut explainers, narration in post), and music ones from a finished song (beat-cut music videos via SRT timestamps; sung jingle ads) — the skill lives at `skills/ai-animation/` — start at `skills/ai-animation/SKILL.md`, pick the style path at Step 0, and load only the files it points to. The Pixar and explainer styles are separate systems; never blend them.
-
-For a Suno song built from an ad script (high-energy, non-rap; often 3 hooks + 1 body), the skill lives at `skills/ai-song/` — start at `skills/ai-song/SKILL.md` and load only the files it points to.
+Start every new session by asking the user what they want to create (image, video or audio), then open that system's menu (`image/SYSTEM.md`, `video/SYSTEM.md` or `audio/SYSTEM.md`) and follow it to exactly one skill. Load only the files each step points to.

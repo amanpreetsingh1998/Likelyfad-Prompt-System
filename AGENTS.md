@@ -1,23 +1,40 @@
-# AGENTS.md — Likelyfad Prompt System
+# AGENTS.md: Likelyfad Prompt System 2.0
 
-> **If you are an AI agent or LLM:** this repo is a library of prompt **skills**. To do a job, open the relevant skill and load **only the files it points you to** — do not load the whole repo. Keeping context lean is a hard requirement here; bloated context degrades accuracy.
+> **If you are an AI agent or LLM (Claude, ChatGPT, Codex, Gemini, Cursor or any other): this is your entry point.** This repo is a library of prompt **skills**, organised into three systems: **image**, **video** and **audio**. Do not load the whole repo. Follow the steps below and load only the files you are pointed to; bloated context degrades accuracy.
 
-## Skills available
-- **`ai-ugc`** — turns a script + reference images into ready-to-paste realistic-UGC talking-head video-ad prompts. Current model: Google Gemini Omni. **Entry point: `skills/ai-ugc/SKILL.md`.**
-- **`ai-ugc-seedance`** — the same job for **ByteDance Seedance 2.0**: turns a script + reference images (+ an optional voice sample) into ready-to-paste realistic-UGC prompts, including **multi-clip ad series** stitched in the edit, with selfie, friend-held, and tripod camera setups. Built on production prompts that rendered well. **Entry point: `skills/ai-ugc-seedance/SKILL.md`.**
-- **`ai-animation`** — turns a finished script or narration + already-made images (character, scene, product) into ready-to-paste **animated** video prompts. **Two separate styles, never mixed:** **Pixar/Disney 3D** (glossy feature-film ads) and the **direct 3D explainer**, a.k.a. the **"Zack D" style** (fast semi-realistic hard-cut explainers, a new visual fact every second, narration added in post). Also handles music from a **finished song**: **beat-cut music videos** (song + SRT timestamps → scenes hard-cut to the beat and lyrics, no lip-sync) and **sung lip-sync** (jingle ads, a character visibly singing). Current model: ByteDance Seedance 2.0. **Entry point: `skills/ai-animation/SKILL.md`.**
-- **`ai-song`** — turns a finished ad script (often **3 hooks + 1 body**) into ready-to-paste **Suno** song prompts (a Style field + the script sung **verbatim** inside structure tags + settings) for a high-energy, non-rap brand song. Current model: Suno v5.5 (Pro). **Entry point: `skills/ai-song/SKILL.md`.**
+## Step 1: ask the user (start here, every new session)
+Ask exactly this, then wait for the answer:
 
-## How to operate
-1. Pick the skill that matches the job (realistic talking-head video → `ai-ugc` if it will be generated in **Gemini Omni**, `ai-ugc-seedance` if it will be generated in **Seedance** — ask which tool if the user hasn't said; animated video, Pixar **or** "Zack D" explainer → `ai-animation`; a Suno song from an ad script → `ai-song`) and open its `SKILL.md`, then follow it. Inside `ai-animation`, **pick the style path at Step 0 and load only that one** — the Pixar and explainer styles are separate systems and blending them breaks the render.
-2. It will tell you which files to read **on demand** — the current model file, the chosen style, examples. Load them only when you reach that step.
-3. The user hands over the inputs (a **script + reference images** for video — plus story context for animation; an **ad script** for a song); you output ready-to-paste prompts in the skill's required format.
+**"What do you want to create?**
+**1) An image** (characters, character sheets, transformations, locations, product shots, posters, thumbnails, first frames…)
+**2) A video** (realistic UGC creator videos, animated Pixar / Zack D videos, music videos…)
+**3) Audio** (a brand song, or a voiceover / narration)"
+
+## Step 2: open that system's menu
+- **Image** → open **`image/SYSTEM.md`**
+- **Video** → open **`video/SYSTEM.md`**
+- **Audio** → open **`audio/SYSTEM.md`**
+
+Each SYSTEM.md asks one more question and sends you to exactly one skill's `SKILL.md`.
+
+## Step 3: follow the skill
+The skill asks for its inputs (one question at a time), tells you which files to read **on demand**, and gives the exact output format. Follow it.
+
+## All skills (for reference; still route through the menus above)
+| System | Skill | What it makes | Entry |
+|---|---|---|---|
+| Image | `character-casting` | Cast plans, character sheets (5-view full body / 3-view chest-up), before/after transformation edits, location references, in 4 styles. Seedream 5.0 Pro or Nano Banana Pro prompts | `image/character-casting/SKILL.md` |
+| Image | `nano-banana` | Any other image, or an edit, with Nano Banana Pro | `image/nano-banana/SKILL.md` |
+| Video | `ai-ugc` | Realistic UGC talking-head prompts for Gemini Omni | `video/ai-ugc/SKILL.md` |
+| Video | `ai-ugc-seedance` | Realistic UGC prompts for Seedance 2.0, incl. multi-clip series | `video/ai-ugc-seedance/SKILL.md` |
+| Video | `ai-animation` | Animated prompts for Seedance 2.0: Pixar/Disney 3D or the Zack D explainer; music videos; sung lip-sync | `video/ai-animation/SKILL.md` |
+| Audio | `ai-song` | Suno song prompts from an ad script, incl. long 5–10 min songs | `audio/ai-song/SKILL.md` |
+| Audio | `elevenlabs-voice` | ElevenLabs v3 voiceover / dialogue scripts with audio tags | `audio/elevenlabs-voice/SKILL.md` |
 
 ## Hard rules
-- Do **not** preload the whole repo. Open the skill entry, then page in detail as needed.
-- Do **not** load `docs/` — it's human background, not for the model.
-- Keep the skill's **locked sections** (e.g. the Voice block) **verbatim** — never reword them.
+- Ask before you assume: use the menus; ask one question at a time.
+- Load only what the current step needs. Never preload the repo. Never load `docs/` (human background only).
+- Keep every skill's **locked** text verbatim (style masters, voice blocks, locked prompt sections).
+- Old links to `skills/<name>/` are signposts only; the map is in `docs/MOVED.md`.
 
-*(Claude Code reads `CLAUDE.md`, which points here. Codex, Cursor, Copilot, and others read this file directly.)*
-
-*(For Claude Code users, all four skills are registered as proper Agent Skills via `.claude/skills/ai-ugc`, `.claude/skills/ai-ugc-seedance`, `.claude/skills/ai-animation`, and `.claude/skills/ai-song` — symlinks into `skills/`, so there is one source of truth. Each auto-loads on trigger or via `/ai-ugc`, `/ai-ugc-seedance`, `/ai-animation`, `/ai-song`. To use one outside this repo: copy its folder from `skills/` into `~/.claude/skills/` for personal use in any project, or zip it and upload as a custom skill on claude.ai.)*
+*(Claude Code reads `CLAUDE.md`, which points here. All seven skills are also registered for Claude Code under `.claude/skills/`.)*
