@@ -1,8 +1,8 @@
 ---
 name: ai-animation
 description: Use this skill whenever the user wants animated short-form video prompts — animated ads or explainers for TikTok, Reels, or Shorts. Two distinct visual styles, never mixed: PIXAR/DISNEY 3D (glossy feature-film ads where a character tells a product story) and the DIRECT 3D EXPLAINER, also called the "Zack D" style (fast semi-realistic hard-cut explainers, a new visual fact every second, narration added in post). Also covers MUSIC from a finished song — beat-cut music videos (song + SRT timestamps, scenes hard-cut to the beat and lyrics, no lip-sync) and sung lip-sync (jingle ads, a character visibly singing). Trigger it when the user has a finished script, narration, or song plus already-made images and wants ready-to-paste AI video prompts. Targets ByteDance Seedance 2.0; the craft is model-agnostic.
-version: 1.4.0
-updated: 2026-09-09
+version: 1.4.1
+updated: 2026-09-18
 ---
 
 # AI Animation — animated video prompt skill (ads + explainers)
