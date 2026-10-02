@@ -1,6 +1,6 @@
 # Google's Gemini Omni guide, mapped to our ai-ugc skill (humans only, agents do not load this)
 
-**Source:** *"Creative prompting with Gemini Omni in Google Flow"*, posted by @FlowbyGoogle on X, 2026-10-01: https://x.com/flowbygoogle/status/2105398907702595802. Google's guide is written for all kinds of video (films, ads, design). This page keeps only what bears on realistic UGC talking-heads and says what we did with each tip. The working rules agents read are in `skills/ai-ugc/references/models/gemini-omni.md`, tagged **[google]**.
+**Source:** *"Creative prompting with Gemini Omni in Google Flow"*, posted by @FlowbyGoogle on X, 2026-10-01: https://x.com/flowbygoogle/status/2105398907702595802. Google's guide is written for all kinds of video (films, ads, design). This page keeps only what bears on realistic UGC talking-heads and says what we did with each tip. The working rules agents read are in `video/ai-ugc/references/models/gemini-omni.md`, tagged **[google]**.
 
 **Status:** taken into ai-ugc 1.0.2 on 2026-10-01. **Not yet rendered.** Every [google] line is a candidate until a test clip confirms it (see `docs/prompt-log.md`, "Awaiting their first real run").
 
