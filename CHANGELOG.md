@@ -4,6 +4,74 @@ All notable changes to this system are documented here. Format follows [Keep a C
 
 ## [Unreleased]
 
+## System 2.0.0 — 2026-10-02: image / video / audio
+A major restructure (Aman, Telegram msgs 100–113). The repo is now three separate systems. **Start from `AGENTS.md`**: it asks "What do you want to create? 1) An image 2) A video 3) Audio", opens that system's `SYSTEM.md` menu, and loads exactly one skill.
+### Changed
+- **Moved:** `skills/ai-ugc`, `skills/ai-ugc-seedance` and `skills/ai-animation` → `video/`; `skills/ai-song` → `audio/`. The file names inside each skill are unchanged.
+- **Old paths:** `skills/<name>/SKILL.md` are now signposts (removed in a later release). The full map is in `docs/MOVED.md`.
+- **Registration updated:** `AGENTS.md` is rewritten as the start menu; `CLAUDE.md`, the README (a new landing-page guide), the marketplace (2.0.0, new sources), the `.claude/skills/` symlinks and `docs/` paths all follow.
+### Added
+- **`image/character-casting` 1.0.0:** from the team's Unique Character Casting system.
+  - The casting theory (unique, recognisable, age-true people; audience notes; the transformation rule; the Final Editor Check).
+  - The script → cast plan → base sheets → reference-guided transition edits workflow.
+  - Vocabulary, wardrobe and problem-area wording.
+  - 4 character + 4 location style masters, kept byte for byte.
+  - A **Seedream 5.0 Pro or Nano Banana Pro** choice, with one model per character. Nano Banana use is untested.
+  - The 5-view (full body) vs 3-view (chest-up) rule.
+- **`image/nano-banana` 1.0.0:** the Nano Banana Pro Prompting Guide v2 (April 2026), split into the skill shape, with a question-first entry, house character-sheet rules, and a hand-off map to the video skills. The examples are kept as written.
+- **`audio/elevenlabs-voice` 1.0.0:** the ElevenLabs v3 Script Optimizer as the operating manual, with the Audio Tags guide as the evidence reference.
+- `docs/MOVED.md`, `docs/nano-banana-sources.md`, and new "awaiting first run" rows in the prompt log.
+### Also released in this version (were local, untested on renders)
+- `ai-ugc` 1.0.2 and `ai-song` 1.2.0 (entries below).
+### Backup
+- The pre-2.0 state is kept on the branch `backup/pre-2.0-2026-10-02` (= `d5fd0b3`), plus a local git bundle.
+
+## ai-song@1.2.0 — 2026-10-02 (released untested on v6 renders; live test pending)
+Suno retired every model before **v6** (launched 2026-09-09), including the v5.5 this skill was calibrated on. The model layer is retargeted to v6, and a recipe is added for the production failure on long songs: 8–10 min songs turning into whispered or spoken lyrics with little or no music. Every line in `models/suno.md` is now tagged **[official]** (read on Suno's pages, 2026-10-01/02), **[v5.5-tested]** (our July calibration, not yet re-run on v6) or **[community]**.
+### Changed
+- **`models/suno.md`** rewritten for v6:
+  - the model line;
+  - **Max Mode** (ON for anything over 2 min);
+  - the **Variety slider at 0** (Suno: reduce it to 0 "to retain full control of your style tags");
+  - the **20-a-month Pro download cap**;
+  - the two official commercial-rights wordings, which disagree;
+  - **Style Personas vs Voices** (Job A now uses a Style Persona; v6 "Voices" is voice cloning of a real human singer);
+  - the v6 editor (Remove, Edit Lyrics / Replace Section with plain-language edits, Extend);
+  - a new **LONG SONGS** recipe: chunked passes, Max Mode, the music restated in every section tag, Style re-pasted every Extend, anti-whisper Exclude entries, listen before each Extend, repair a whispered span;
+  - new symptom rows;
+  - a new **candidate** Job A method: swap the leading hook in-song with v6 Replace Section (untested; it failed on v5.5).
+- `[Whispered]`, `[Spoken]`, `[Interlude]` and `[Breakdown]` moved from "medium reliability" to never-use in our songs.
+- **`SKILL.md`**: targets v6; new must-never (long songs in chunks, Variety 0); Persona replaces Voice throughout; the long-song workflow step now follows the recipe.
+- **`styles/high-energy-nonrap.md` 1.1.0**: Variety 0, Max Mode, long-song Style and Exclude additions; the proven strings are marked as v5.5.
+- **`chassis.md`**, **`examples/three-hooks-one-body.md`**: Persona wording, v6 settings, and the download count. The example is marked not yet re-rendered on v6.
+- **In-app check (Aman's screenshots, 2026-10-02):** the v6 Advanced screen and its defaults are recorded: Max Mode Off, Variety Off, Weirdness and Style Influence 50%, and three new settings (Vocal Gender, Duration Custom/Auto, Personalize "My Taste"). Our settings: Max Mode On, Variety Off, Vocal Gender set, Personalize Off; Custom Duration is a test.
+- README and marketplace: Suno v6. Prompt log: two new "awaiting first run" rows.
+- **Second research round (5 Sonnet agents, 2026-10-02)** folded into `models/suno.md`:
+  - the magic wand is Style Augmentation, so never press it [official]; Personas live under + Voice [official]; Replace Section needs a 10–30s selection [official];
+  - long songs: a tighter first pass (1,800–2,500 chars) and one section per Extend; never change BPM or Style mid-chain; set the Extend point 3–5s before a dead spot; the "Keeper Boundary";
+  - 6–12 syllables per line; v6's muffled baseline (strip layers, put the vocal in front);
+  - Vocal Gender may slip; Custom Duration is "a target, not a guarantee";
+  - the conflicts are recorded, not resolved: v6 sites say in-Style negations backfire and Exclude should be short, the opposite of our v5.5 A/B (so it is the first v6 A/B); 15–30 vs 120–180-word Style; one-pass 8 min vs chunks.
+- **Peer production SOPs (shared privately, 2026-10-02)** folded in. Techniques only, restated, with no identifiers, tagged [peer-SOP]; Kang's own reasoning is tagged [Kang idea]:
+  - the pacing block (no sustained notes or melisma, gaps under 1s);
+  - hook harvesting (first-choice Job A hook method);
+  - overlap-splice as the Job B fallback, behind Extend-from-timestamp, with the full lock and a join check;
+  - a "Matching a reference ad" section;
+  - a ban on quiet section directions (stripped back / minimal / intimate / breakdown / build) and group vocals, a likely cause of the whisper stretches;
+  - the v5.5 hook-arc string marked hook-clips-only.
+- Aman's go to bake everything in and test it on a live project (TG msgs 82, 84).
+### Open for Aman
+- The research recommends a **repeating chorus** to keep long songs sung. Our verbatim rule forbids repeating a line the script doesn't repeat. This is unchanged pending his call.
+
+## ai-ugc@1.0.2 — 2026-10-01 (released untested on renders; test pending)
+Takes in Google's own prompting guide for the model, *"Creative prompting with Gemini Omni in Google Flow"* (@FlowbyGoogle, 2026-10-01). Every new line is tagged **[google]** and is untested on our clips; where it disagrees with a tested line, the tested line wins until a render settles it. Tip-by-tip mapping: `docs/gemini-omni-flow-guide.md`.
+### Changed
+- **`models/gemini-omni.md`**: the model **cuts between angles by default**, so the one-take is now stated explicitly (this replaces the old claim "one continuous take per generation"). New sections: more reference types (video as a motion and audio reference, last frame, style transfer), timing with timecodes (a test variant; word-pinned gestures stay the default), Google's negatives list with the two that must never be used on UGC (*No camera movement*, *No dialogue*), and **fixing a near-miss by conversational edit** ("Keep everything else the same"). Two new symptom rows. The access line now flags reports of an API preview and an "Omni 1.1 Flash" version as unverified.
+- **Locked Negatives** (`styles/realistic-ugc.md` 1.0.1, `chassis.md`, `examples/realistic-ugc.md`): open with **"No scene cuts."**. The example's line is marked as not yet re-rendered.
+- **`SKILL.md`**: new must-never (always state the one-take), workflow step 6 (fix a near-miss by editing), and a note that [google] lines are untested.
+### Note
+- Version collision: the parked `naming-rule-patch` branch also claimed ai-ugc 1.0.2. If it is ever revived, it takes the next number.
+
 ## ai-animation@1.4.1 — 2026-09-18
 Wording-only patch.
 ### Changed

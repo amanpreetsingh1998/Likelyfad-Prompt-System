@@ -1,0 +1,35 @@
+# Locations: reference workflow
+
+### Read the script and choose the setting
+
+Identify essential recurring locations and environments needed to understand the story. Reuse one reference for the same unchanged location. Add a separate reference when the script changes the home, time-dependent decor, or meaningful condition of the space. Do not invent unnecessary rooms.
+
+Infer who lives or works there, the audience, age, region, occupation, income, tastes, routines, and the scene's story stage. Use explicit script details first. Fill visual gaps with coherent fictional design choices and label consequential assumptions briefly outside the prompt. Ask one necessary question only when an unresolved detail would materially change the story; never ask the user to name an interior style or know design terminology.
+
+Choose and explicitly name useful design keywords yourself: traditional grandma house, cozy cottage, modest suburban traditional, warm contemporary, mid-century modern, practical rental, sparse post-divorce apartment, practical corporate office, neighborhood café, or another specific combination appropriate to the script. Minimalism still needs intentional furniture, materials, lighting fixtures, and personal objects; it does not mean an empty generic room.
+
+Default to believable lower- or middle-income settings unless the script or user establishes wealth. Use modest dimensions, practical furniture, ordinary finishes, and affordable decor. Beautiful rendering does not imply expensive architecture. Explicitly wealthier characters can have better finishes, appliances, art, and furniture without automatically living in a palace.
+
+Let the specific resident and story determine the design. White, Black, and Latino American reference examples are a range of possibilities, not mandatory ethnic decor. Do not assign wealth, tastes, or home type from ethnicity alone. Cultural details can be included when supported and appropriate to this particular fictional household.
+
+### Describe composition more than rendering technique
+
+Write a richly specified location description, usually about 350–650 words when the room needs this level of detail. Favor concrete spatial instructions over repeated style adjectives. Name the room and inhabitant, design keywords, architecture and dimensions, palette, camera position, foreground, middle ground, background, two adjoining walls, windows and doorways, furniture relationships, circulation, wall treatments, shelves, textiles, objects, and visible wear. Describe exterior references through an angled view of the building, entrance, landscaping, neighboring context, and foreground-to-background depth instead of forcing indoor features into them.
+
+Do not stop at a sofa, table, and one picture. Specify a coherent selection of wall features: a multi-piece art arrangement, built-ins, shelves, curtains, a display cabinet, noticeboard, tile backsplash, or another treatment appropriate to the setting. Detail object placement and what occupies shelves and work surfaces. Keep no-readable-text constraints even for books, papers, packaging, notices, and screens.
+
+The location must feel inhabited while remaining empty of people and animals. Default to a maintained home or workplace, not a complete mess. Show belongings accumulated over time, slightly uneven cushions, loosely draped throws, mugs, reading glasses, slippers, practical storage, cables, or scene-appropriate items. Select meaningful items for the character; do not reuse one identical clutter list in every room. Keep main walking and action areas usable. Lived in does not mean messy: keep drawers and cabinet doors closed unless a specific story action or practical reason calls for them to be open. Do not scatter belongings across the floor, pile dirty dishes everywhere, or add overflowing bins and disorder as generic realism. Use a few restrained signs of use, such as a casually hung bathroom towel or one towel loosely placed on the floor near the shower when appropriate, rather than multiple discarded towels. Slight clutter is localized and purposeful; surfaces remain mostly clear, walkways unobstructed, and the setting reasonably tidy. No human or animal figures in artwork, photographs, screens, or reflections; use landscapes, abstract art, botanical prints, or objects instead of visible family portraits.
+
+For a grandma home, consider older wood furniture, floral textiles, crocheted blankets, ceramics, lamps, layered rugs, books, and knitting supplies. A younger professional home can use a chosen contemporary or mid-century design with personal art, music equipment, books, textiles, and routine objects. A post-divorce move can show a small, temporary, emotionally subdued space through half-unpacked boxes, mismatched furniture, sparse shelves, and cooler light. These are story choices, not universal rules about age or background.
+
+Apply the same specificity to cafés and offices. Cafés need an identifiable layout, counter, seating, equipment, cups, shelving, wall treatments, and signs of use. Offices need realistic cubicle spacing, varied workstations, cables, folders, storage, noticeboards, printer areas, ceiling fixtures, and modest wear. Avoid blank generic spaces, identical desks, and luxury executive offices when the script calls for an ordinary workplace.
+
+### Assemble and deliver the prompt
+
+Use the ad's selected style unless the user explicitly requests a different location style. Show **Generation model: [specified model]** above every prompt. Copy the complete corresponding location master below unchanged into one fenced `text` block, then append two newlines and the complete location description. The location description supplies the actual room and chosen design keywords; it is not a request for the user to fill out a template.
+
+Character masters remain unchanged. Never use a character turnaround master for a location: no five views, neutral seamless background, poses, or human anatomy instructions. Both cartoon character styles retain exaggerated character proportions. High-fidelity locations instead use restrained stylized 3D geometry, rich surfaces, dramatic motivated lighting, sophisticated grading, and controlled luminous bloom. UGC locations use flat soft household or office lighting and slight everyday clutter.
+
+After plan approval, deliver character references and transitions first, then essential locations in story order, one complete prompt per message. Wait for “next” or a revision. If the user explicitly requests several examples or all prompts together, follow that request. For revisions, always return the full assembled prompt in an easy-to-copy block, never only the changed sentence. Do not generate images unless requested.
+
+Before presenting a location prompt, check script fit, named design style, realistic budget, detailed composition, purposeful wall treatments, personal signs of use, no people or animals, and the selected render style. Keep explanations outside the block brief.

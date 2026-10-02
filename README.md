@@ -1,120 +1,93 @@
-# Likelyfad Prompt System
+# Likelyfad Prompt System 2.0
 
-**In one line:** give it your **script** and your **reference images**, and it writes ready-to-paste **AI prompts** — for realistic creator-style video ads, for animated video ads and explainers, and for brand songs. You paste what it gives you into the tool it names and generate.
+**In one line:** paste this repo's link into any AI chat, answer a few questions, and it writes ready-to-paste prompts for **images**, **videos** and **audio** for short-form ads: characters, creator videos, Pixar-style animation, brand songs and voiceovers.
 
-**You don't need to know anything about AI prompting.** Pick the skill that matches your job and follow its steps.
+**You don't need to know anything about AI prompting.** The system asks you what it needs, one question at a time.
 
 ---
 
-## ✅ What it makes right now
+## ▶️ How to start (any AI: Claude, ChatGPT, Codex, Claude Code, Cursor, Gemini)
 
+1. Open a new chat in your AI tool.
+2. Paste the repo link and one sentence:
+
+   > https://github.com/amanpreetsingh1998/Likelyfad-Prompt-System
+   > Read AGENTS.md in this repo and follow it.
+
+3. It asks: **"What do you want to create? 1) An image 2) A video 3) Audio."** Answer, then answer its next questions.
+4. You get a prompt in a grey box, plus the settings and the list of images to upload. Paste it into the tool it names and generate.
+
+*Claude Code users: open a session in this repo (it reads `CLAUDE.md` automatically), or run `/plugin marketplace add amanpreetsingh1998/Likelyfad-Prompt-System`.*
+
+---
+
+## 🗂️ The three systems
+
+### 🖼️ Image
+| You want | Skill | Goes into |
+|---|---|---|
+| Characters for a whole script: a cast plan, **character sheets** (5-view full body, or 3-view chest-up), **before/after or week-by-week transformation** sheets, and **location** references. Styles: Pixar simple, Pixar high fidelity, Realistic Movie, UGC iPhone | **`character-casting`** | Seedream 5.0 Pro *or* Nano Banana Pro (it asks which) |
+| Any other image: product shots, lifestyle or UGC stills, thumbnails, text-heavy posters and ads, comparison or before/after images, language versions of an ad, infographics, first frames for a video, editing an image | **`nano-banana`** | Nano Banana Pro |
+
+Every character is cast as **a specific, recognisable person** (real face details, real age, real variety) and never a generic AI face. That's the casting theory in `image/character-casting/references/theory.md`.
+
+### 🎥 Video
 | You want | Skill | Goes into |
 |---|---|---|
 | A real-looking person talking to camera, selfie-style, holding your product | **`ai-ugc`** | Google Gemini Omni |
-| The same kind of real-looking creator video, filmed as a selfie, by a friend, or on a tripod, including an ad split into several clips | **`ai-ugc-seedance`** | ByteDance Seedance 2.0 |
-| An animated ad, glossy Pixar/Disney look, a character telling your product story | **`ai-animation`** (Pixar path) | ByteDance Seedance 2.0 |
-| A fast explainer — semi-realistic 3D, hard cuts, a new fact every second, voiceover on top. **The "Zack D" style** | **`ai-animation`** (explainer path) | ByteDance Seedance 2.0 |
-| A music video cut to the beat of a song you already have | **`ai-animation`** (music-video mode) | ByteDance Seedance 2.0 |
-| A character who visibly sings your jingle | **`ai-animation`** (singing mode) | ByteDance Seedance 2.0 |
-| A brand song built from an ad script, usually 3 hooks + 1 body | **`ai-song`** | Suno v5.5 (Pro) |
+| The same kind of creator video filmed as a selfie, by a friend or on a tripod, including an ad split into several clips | **`ai-ugc-seedance`** | ByteDance Seedance 2.0 |
+| An animated ad in the glossy Pixar/Disney look, **or** the fast **"Zack D"** explainer, **or** a music video cut to a finished song, **or** a character singing your jingle | **`ai-animation`** | ByteDance Seedance 2.0 |
+
+### 🎵 Audio
+| You want | Skill | Goes into |
+|---|---|---|
+| A brand song from an ad script (usually 3 hooks + 1 body), including long 5–10 minute songs | **`ai-song`** | Suno v6 (Pro) |
+| A voiceover, ad read, narration or dialogue | **`elevenlabs-voice`** | ElevenLabs Eleven v3 |
 
 Everything works for **any brand or product**. Vertical, short-form, for TikTok / Reels / Shorts.
-
-## 🚫 What it can't do yet (don't force it)
-- Any model other than the ones listed above. The model is a swappable layer, so ask the admin to add one.
-- Animation styles beyond Pixar/Disney 3D and the direct 3D explainer.
-- In `ai-ugc` (Gemini Omni): realistic clips longer than 10 seconds, or with more than one person on screen. (`ai-ugc-seedance` goes up to 15 seconds per clip.)
-- Writing your script, choosing your marketing angle, or making your images. Those arrive already done.
-
-Need something not on the list? **Ask the admin.** Forcing it produces a bad prompt.
-
----
-
-## 1) Load it into your AI (once, at the start of a session)
-
-- **Claude Code** — open a session **in this repo** and it loads automatically. Then say which job you want, e.g. *"Use the ai-ugc skill."*
-  *(Optional: run `/plugin marketplace add amanpreetsingh1998/Likelyfad-Prompt-System` once to use it in any session without opening the repo.)*
-- **OpenAI Codex / Cursor / other coding agents** — open or connect this repo; the agent reads **`AGENTS.md`** automatically and follows it to the right skill. Then say: *"Follow the ai-animation skill in this repo."*
-- **ChatGPT / Claude.ai / Gemini (a plain chat, no repo access)** — on GitHub, open the skill's `SKILL.md`, copy all of its text into the chat, and say: *"Follow this skill; ask me for any files it references."* When it asks for a referenced file, open that file on GitHub and paste it in too.
-
----
-
-## 2) The steps, per skill
-
-### 🎥 `ai-ugc` — realistic talking-head ads
-**Step 1 — give it the full script first.** Paste your entire script, all hooks plus body. Let it read the emotion and the performance that implies. Don't ask for a prompt yet.
-
-**Step 2 — give it your reference images and label each one.**
-- **First-frame image** — the exact opening shot. Locks look, framing, background.
-- **Character set** — the multi-angle photo. Keeps the face consistent as the camera moves.
-- **Product image** — a clean product photo so the label doesn't distort.
-
-**Step 3 — give it the one line you want to film.** It must fit **4, 6, 8, or 10 seconds, never longer than 10.** You get the full prompt for that line. Repeat for each line.
-
-### 📱 `ai-ugc-seedance` — realistic creator videos in Seedance
-**Step 1 — give it the whole script,** every clip, and say who the person is and how they talk (e.g. "sassy know-it-all", "calm expert").
-
-**Step 2 — give it your images and label each one.**
-- **First-frame image** — the exact opening shot.
-- **Face image** — keeps the same person in every clip.
-- **Product label close-up** — if a product is in the shot, so the label stays right.
-- **Voice sample (optional)** — a 3–8 second MP3 of the voice you want. It copies the sound of the voice, not the words.
-
-**Step 3 — say who is holding the phone:** the person themselves (selfie), a friend across from them, or a tripod.
-
-**Step 4 — tell it anything that must never appear.** You get a clip plan first, then one full prompt per clip, each with its length and a numbered list of files to upload in order.
-
-Formats marked **trial** (founder talking head, street interview, hands-only voiceover, two people talking) haven't been tested yet. Check the result closely and tell the admin how it came out.
-
-### 🎬 `ai-animation` — animated ads and explainers
-**Step 1 — say which style you want.** This matters more than anything else. **Pixar/Disney** is the glossy cartoon-mascot look. The **"Zack D" style** is the fast semi-realistic explainer with hard cuts and narration added afterwards. They are separate systems and must never be blended, so the skill will ask if it isn't clear.
-
-**Step 2 — hand over the finished script or narration, plus your story context.** It will ask whether anything must **never** appear. Answer honestly; that list is enforced for the whole project.
-
-**Step 3 — hand over your already-made images**, labelled: the character, the scene or start frame, the product.
-
-**Step 4 — say what you want generated.** You get a complete prompt per clip, plus the clip length and the numbered asset list.
-
-**For a music video:** hand over the finished song, its **SRT timestamped lyrics**, the BPM, and the story. You get one prompt per segment plus an edit sheet. The visuals generate silent and you lay the song over them in the edit.
-
-### 🎵 `ai-song` — a brand song from an ad script
-**Step 1 — paste the whole script** and confirm which lines are the 3 hooks and which are the body.
-
-**Step 2 — pick the sound.** It proposes two or three fast, non-rap treatments. You choose one for the whole set.
-
-**Step 3 — you get the package:** the Style field, the Lyrics field with your words **verbatim**, the settings, the hook variants, and a step-by-step assembly runbook.
-
-**Your words are never changed.** The skill only adds section tags, vocal cues, and line breaks. The one exception is respelling a brand name so Suno pronounces it right, and it will always flag that and ask.
-
----
-
-## 3) Generate it
-You'll get a **prompt in a grey box**, plus the **length** and a **numbered list of images to use**. In the tool the skill named, paste the prompt, add the images **in the listed order**, and generate. ✅
 
 ---
 
 ## ✔️ Do  /  ❌ Don't
 
 **Do**
-- Give the **full script first**, then the **images**, then the specific thing you want made.
-- Say which **animation style** you want up front.
-- Attach every reference the skill asks for, so faces, backgrounds, and product labels stay locked.
-- Paste the prompt it gives you **exactly** as-is.
-- Tell it up front if something must **never** appear in the visuals.
+- Give the **whole script** when it asks. It needs the full story to plan characters, clips and songs.
+- Answer its questions; say "next" to get the next prompt.
+- Attach every reference image it asks for, in the order it lists.
+- Paste the prompt **exactly** as given.
+- Check every generated character against the editor checklist before using it in a video.
 
 **Don't**
-- ❌ Don't write or rewrite the prompt yourself.
-- ❌ Don't mix the Pixar and explainer styles in one job.
-- ❌ Don't ask for styles or models that aren't built yet.
-- ❌ Don't exceed 10 seconds in one `ai-ugc` (Gemini Omni) clip. `ai-ugc-seedance` clips usually run 5–12 seconds, with 15 as the ceiling.
-- ❌ Don't skip the reference images.
+- ❌ Don't rewrite the prompt yourself.
+- ❌ Don't mix models for one character (e.g. the Before in Seedream and the After in Nano Banana).
+- ❌ Don't mix the Pixar and Zack D styles in one video.
+- ❌ Don't ask for styles or models that aren't listed. Ask the admin to add them.
+
+---
+
+## 🧪 What's tested and what isn't
+
+Each skill marks its rules by evidence (tested on our renders, from the official docs, or untested). New in 2.0 and **not yet tested on real renders**:
+- `character-casting`: Seedream vs Nano Banana, and the transformation flow.
+- `nano-banana`: the guide as a skill.
+- `elevenlabs-voice`.
+- `ai-song` 1.2.0: Suno v6 and the long-song recipe.
+- `ai-ugc` 1.0.2: Google's Omni guidance.
+
+If a result comes out wrong, tell the admin what went wrong in plain words. Every fix gets folded back in so it doesn't happen twice.
 
 ---
 
 ## 🛠️ If something looks off
-- Say what's wrong in plain words, e.g. `the camera looks too still`, `make it 6 seconds`, `the cuts are too slow` — and it will adjust the prompt.
-- If the **generated video or song** comes out wrong (background changed, label warped, hands look off, dead air before the vocals), tell the admin. Most of these are known issues already tuned for, and each new one gets folded back into the system so it doesn't happen twice.
+Say what's wrong in plain words ("the face changed between views", "the song turns to whispering after 4 minutes", "make it 6 seconds") and it will adjust the prompt.
 
 ---
 
-<sub><b>For maintainers:</b> internals live in <code>skills/&lt;skill&gt;/</code> (entry: <code>SKILL.md</code>); agent instructions in <code>AGENTS.md</code>; research and version history in <code>docs/</code> and <code>CHANGELOG.md</code>. Keep model-specific wording inside each skill's <code>references/models/</code> file — each model is a swappable layer, and the chassis and styles stay model-agnostic. (A skill may carry a model or tool name in its own name, allowed since 2026-09-16, e.g. <code>ai-ugc-seedance</code>.) Log every notable generation in <code>docs/prompt-log.md</code> and fold the lesson into that model's symptom→fix table.</sub>
+<sub><b>For maintainers:</b>
+<ul>
+<li><b>Entry and menus:</b> <code>AGENTS.md</code> → <code>image/SYSTEM.md</code> · <code>video/SYSTEM.md</code> · <code>audio/SYSTEM.md</code> → one skill's <code>SKILL.md</code>.</li>
+<li><b>Model wording</b> lives in each skill's <code>references/models/</code> (the swappable layer). Model names may appear in a skill's own name (allowed since 2026-09-16).</li>
+<li><b>Paths:</b> old <code>skills/&lt;name&gt;/</code> paths are signposts; see <code>docs/MOVED.md</code>.</li>
+<li><b>History and logs:</b> research and the prompt log are in <code>docs/</code> (humans only); version history is in <code>CHANGELOG.md</code>.</li>
+<li><b>Logging rule:</b> log every notable generation in <code>docs/prompt-log.md</code> and fold the lesson into that model's symptom→fix table.</li>
+</ul></sub>

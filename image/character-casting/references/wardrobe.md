@@ -1,0 +1,26 @@
+# Everyday US wardrobe from the user's photographs
+
+These are **clothing and grooming observations**, not identities or rules for racial groups. Recombine details for fictional people. Do not copy a photographed person's whole likeness. A photograph does not establish someone's ancestry, hometown, income, job, or beliefs.
+
+## Range actually shown
+
+| Everyday or occasional choice | Useful visible specificity |
+| --- | --- |
+| At-home ease | Bright sleeveless floral house dress with a loose waist; a roomy cream-and-green leaf-print short-sleeved top over plain peach trousers; a leopard-print V-neck dress. Clothes can simply be comfortable and repeatedly worn. |
+| Plain practical casual | Navy quarter-zip fleece over light khakis with beige slip-ons; tan zip hoodie open over a red graphic tee; beige short-sleeved plaid button-down with loose gray trousers and leather sandals. One ordinary item may carry the outfit. |
+| Personal casual | Close-cropped light hair with a loose tan belted shirtdress over wide charcoal trousers; orange loose-sleeved top with patterned relaxed pants; dark blue open-neck shirt with busy patterned trousers, brimmed hat, and sandals. These people make different choices about matching and fit. |
+| Distinctive everyday menswear | Truck cap, dark sunglasses, long gray mustache, and a worn graphic shirt; a white cowboy hat and blue embroidered button-down; a white tank, very wide black pants, brown belt and sturdy brown shoes; weathered denim jacket over a blue shirt with cap, glasses, and a full white beard. Do not assign a job or ancestry from these garments. |
+| Dressed for an occasion | Teal skirt suit with embellished matching hat and cane; cobalt dress with long cardigan and flat silver sandals; pink suit over a patterned shell with pearls; cream blazer and trousers; checked blazer over vest and collared shirt; orange checked blazer with argyle vest and contrasting trousers. Formal does not mean every piece must look fashionable or new. |
+
+## How to use the range
+
+1. Invent a specific, plausible American day for a character: a grocery run in Phoenix, a family dinner in Chicago, a community gathering in Atlanta, a quiet day at home in Ohio. These are **fictional casting contexts**, not deductions from a reference person's appearance. The script's setting wins.
+2. Decide whether this person repeats comfortable basics, mixes whatever is clean, dresses carefully for an occasion, likes print, wears a favorite hat, or favors easy shoes. Choose one direction per person and vary across the cast.
+3. Describe the actual garment and its hang: a fleece stopping at the hips, a faded roomy tee, trousers pooling at the shoes, a dress falling straight from the shoulders, sleeves loose around the upper arms. Give each complete outfit at least two identifying choices beyond item and color: cut, fastening, print, fabric, fit, worn edge, shoes, practical bag, favorite hat, watch, or an imperfect pairing. Add wear or mismatching only when it helps.
+4. Make a layer decision every time. Most outfits should have a believable visible layer: a worn open cardigan over a dress, an unbuttoned overshirt, a light jacket, a vest, or a blazer when appropriate. Layers can be casual and imperfect, not automatically a coordinated fashion statement. A single dress or top is still possible in heat or when a layer obscures the visual problem, but its construction, accessories, socks or hosiery, and shoes must complete the outfit.
+5. Match clothing to the visible concern when relevant: a plausible dress, romper, or shorts exposing upper thighs for cellulite; a suitable higher hem with bare ankles and low shoes for ankle swelling; a top whose fit makes generalized fullness readable for bloating. Choose legwear deliberately. Opaque pantyhose would hide thigh texture; ankle socks or tights would hide ankle swelling. Sheer hosiery can be appropriate only when it leaves the relevant texture genuinely readable. Preserve the person's otherwise ordinary clothing choices. Four women with the same issue need four different clothing silhouettes, not four colors of a short-sleeved blouse and skirt.
+6. Hair, glasses, grooming, dental details, and silhouette can make faces individual. Choose them separately from race or ancestry. Do not use an uneven eyebrow as a stock distinctive detail, and do not assign imperfect teeth to a British-American character because of heritage.
+
+## Avoid the generic outfit result
+
+“Printed top, short skirt, flat shoes” supplies categories but no individual. For an adult with exposed thighs, possibilities include a button-front faded denim dress with a self-tie, an open cotton cardigan, bare legs, and worn leather slides; high-rise walking shorts beneath an oversized striped camp shirt and light utility vest, with short socks and canvas sneakers; a soft floral wrap dress with gathered sleeves and a slightly frayed hem, a thin open cardigan, bare legs, and low wedges; or a loose jersey romper with an old zip hoodie, no socks, and practical sandals. Add an actual personal accessory. These are construction examples, not a fixed rotation. Adapt the garment to the character's habits, body, scene, and climate. Avoid prescribing polished coordination or brand-new clothes by default.

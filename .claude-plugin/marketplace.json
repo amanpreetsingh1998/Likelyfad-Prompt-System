@@ -1,31 +1,49 @@
 {
   "name": "likelyfad-prompt-system",
-  "version": "1.0.0",
-  "description": "Agent-loadable prompt skills for producing content with AI models.",
+  "version": "2.0.0",
+  "description": "Agent-loadable prompt skills in three systems (image, video, audio). Start from AGENTS.md: it asks what you want to create and loads the right skill.",
   "plugins": [
     {
+      "name": "character-casting",
+      "source": "./image/character-casting",
+      "version": "1.0.0",
+      "description": "Turn a full ad script into a minimal cast plan, then character reference sheets (5-view full body or 3-view chest-up), reference-guided before/after transformation edits, and location references — in Pixar simple, Pixar high fidelity, Realistic Movie or UGC iPhone style. Every character a unique, recognisable, age-true individual. Seedream 5.0 Pro or Nano Banana Pro prompts."
+    },
+    {
+      "name": "nano-banana",
+      "source": "./image/nano-banana",
+      "version": "1.0.0",
+      "description": "Write ready-to-paste Google Nano Banana Pro image prompts and conversational edits: product, lifestyle and UGC stills, thumbnails, text-heavy posters, comparison and before/after images, language variants, infographics, keyframes and first frames for video."
+    },
+    {
       "name": "ai-ugc",
-      "source": "./skills/ai-ugc",
-      "version": "1.0.1",
+      "source": "./video/ai-ugc",
+      "version": "1.0.2",
       "description": "Turn a script + reference images into ready-to-paste realistic UGC talking-head video-ad prompts. Current model: Google Gemini Omni (swappable)."
     },
     {
       "name": "ai-ugc-seedance",
-      "source": "./skills/ai-ugc-seedance",
+      "source": "./video/ai-ugc-seedance",
       "version": "1.0.0",
       "description": "Turn a script + reference images (+ an optional voice sample) into ready-to-paste realistic UGC video-ad prompts for ByteDance Seedance 2.0 — selfie, friend-held, or tripod creator videos, including multi-clip ad series stitched in the edit. Built on production prompts that rendered well. Current model: ByteDance Seedance 2.0 (swappable)."
     },
     {
       "name": "ai-animation",
-      "source": "./skills/ai-animation",
+      "source": "./video/ai-animation",
       "version": "1.4.1",
       "description": "Turn a finished script or narration + already-made images into ready-to-paste animated video prompts in two separate styles: Pixar/Disney 3D ads and the direct 3D explainer (the \"Zack D\" style, fast hard-cut explainers with narration in post). Also beat-cut music videos (finished song + SRT) and sung lip-sync jingles. Current model: ByteDance Seedance 2.0 (swappable)."
     },
     {
       "name": "ai-song",
-      "source": "./skills/ai-song",
-      "version": "1.1.0",
-      "description": "Turn a finished ad script (often 3 hooks + 1 body) into ready-to-paste Suno song prompts — a Style field + the script sung verbatim inside structure tags + settings — for a high-energy, non-rap brand song. Current model: Suno v5.5 Pro (swappable)."
+      "source": "./audio/ai-song",
+      "version": "1.2.0",
+      "description": "Turn a finished ad script (often 3 hooks + 1 body) into ready-to-paste Suno song prompts — a Style field + the script sung verbatim inside structure tags + settings — for a high-energy, non-rap brand song. Current model: Suno v6 Pro (swappable)."
+    },
+    {
+      "name": "elevenlabs-voice",
+      "source": "./audio/elevenlabs-voice",
+      "version": "1.0.0",
+      "description": "Turn a plain spoken script into an optimised ElevenLabs Eleven v3 script (audio tags, punctuation, casing, spelled-out numbers) plus delivery notes, for voiceovers, ad reads, narration and dialogue."
     }
   ]
 }
