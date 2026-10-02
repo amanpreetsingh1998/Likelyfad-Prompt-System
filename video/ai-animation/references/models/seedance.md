@@ -50,7 +50,7 @@ For singing (a finished track + lyrics — workflow → `../delivery/singing.md`
 **Reusing a previous clip's final frame** follows the same logic: useful for a continuous action, exact geometry, a transformation, or a deliberate return to the same composition — **unnecessary for a deliberate hard cut**, where it only constrains the new shot. For independent cuts, character references plus repeated style/background language are sufficient, and fast editing conceals small environment differences.
 
 ## Negatives — Seedance has NO negative field (critical)
-> **Scope:** this rule is for **animated/stylized** prompts. Realistic UGC on the same model is written differently: its production prompts use NOT-lists and rendered well. See `skills/ai-ugc-seedance/references/models/seedance.md`. Never port either rule into the other skill.
+> **Scope:** this rule is for **animated/stylized** prompts. Realistic UGC on the same model is written differently: its production prompts use NOT-lists and rendered well. See `video/ai-ugc-seedance/references/models/seedance.md`. Never port either rule into the other skill.
 
 There is **no `negative_prompt`** on any Seedance 2.0 endpoint, and **negated words backfire** — writing "no blur / no realism / no photoreal" makes the model treat those nouns as content signals and *add* them. So in the video prompt:
 - **Affirmative phrasing only.** "no shaky camera" → "smooth stabilized move." "no realism" → "keep the 3D animated render." "no extra fingers" → "clean, correct hands."

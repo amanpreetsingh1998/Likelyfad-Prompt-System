@@ -14,7 +14,7 @@ The "why" behind the system. Kept out of the agent load path on purpose (loading
 ## Versioning
 - Per-module versions (front-matter `version:`), git tags `<skill>@x.y.z`, root `CHANGELOG.md` in Keep-a-Changelog format. No filename suffixes. MAJOR bump only when a prompt's input/output contract breaks.
 
-## Gemini Omni (current model) — see `skills/ai-ugc/references/models/gemini-omni.md` for the working facts
+## Gemini Omni (current model) — see `video/ai-ugc/references/models/gemini-omni.md` for the working facts
 - Confirmed first-hand (Gemini Omni API prompt repo): durations 4/6/8/10, 9:16, 1–5 reference images, native lip-sync, named-voice presets, SynthID, no public API at launch.
 - Community/snippet-sourced (lower confidence): exact resolution, pricing, some safety specifics.
 
