@@ -4,6 +4,28 @@ All notable changes to this system are documented here. Format follows [Keep a C
 
 ## [Unreleased]
 
+## System 2.0.0 — 2026-10-02: image / video / audio
+A major restructure (Aman, Telegram msgs 100–113). The repo is now three separate systems. **Start from `AGENTS.md`**: it asks "What do you want to create? 1) An image 2) A video 3) Audio", opens that system's `SYSTEM.md` menu, and loads exactly one skill.
+### Changed
+- **Moved:** `skills/ai-ugc`, `skills/ai-ugc-seedance` and `skills/ai-animation` → `video/`; `skills/ai-song` → `audio/`. The file names inside each skill are unchanged.
+- **Old paths:** `skills/<name>/SKILL.md` are now signposts (removed in a later release). The full map is in `docs/MOVED.md`.
+- **Registration updated:** `AGENTS.md` is rewritten as the start menu; `CLAUDE.md`, the README (a new landing-page guide), the marketplace (2.0.0, new sources), the `.claude/skills/` symlinks and `docs/` paths all follow.
+### Added
+- **`image/character-casting` 1.0.0:** from the team's Unique Character Casting system.
+  - The casting theory (unique, recognisable, age-true people; audience notes; the transformation rule; the Final Editor Check).
+  - The script → cast plan → base sheets → reference-guided transition edits workflow.
+  - Vocabulary, wardrobe and problem-area wording.
+  - 4 character + 4 location style masters, kept byte for byte.
+  - A **Seedream 5.0 Pro or Nano Banana Pro** choice, with one model per character. Nano Banana use is untested.
+  - The 5-view (full body) vs 3-view (chest-up) rule.
+- **`image/nano-banana` 1.0.0:** the Nano Banana Pro Prompting Guide v2 (April 2026), split into the skill shape, with a question-first entry, house character-sheet rules, and a hand-off map to the video skills. The examples are kept as written.
+- **`audio/elevenlabs-voice` 1.0.0:** the ElevenLabs v3 Script Optimizer as the operating manual, with the Audio Tags guide as the evidence reference.
+- `docs/MOVED.md`, `docs/nano-banana-sources.md`, and new "awaiting first run" rows in the prompt log.
+### Also released in this version (were local, untested on renders)
+- `ai-ugc` 1.0.2 and `ai-song` 1.2.0 (entries below).
+### Backup
+- The pre-2.0 state is kept on the branch `backup/pre-2.0-2026-10-02` (= `d5fd0b3`), plus a local git bundle.
+
 ## ai-song@1.2.0 — 2026-10-02 (released untested on v6 renders; live test pending)
 Suno retired every model before **v6** (launched 2026-09-09), including the v5.5 this skill was calibrated on. The model layer is retargeted to v6, and a recipe is added for the production failure on long songs: 8–10 min songs turning into whispered or spoken lyrics with little or no music. Every line in `models/suno.md` is now tagged **[official]** (read on Suno's pages, 2026-10-01/02), **[v5.5-tested]** (our July calibration, not yet re-run on v6) or **[community]**.
 ### Changed
