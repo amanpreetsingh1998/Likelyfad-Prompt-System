@@ -1,8 +1,8 @@
 ---
 name: ai-ugc
 description: Use this skill whenever the user wants realistic UGC-style video-ad prompts — talking-head / creator-style short vertical videos where a person speaks to camera (often holding a product) for TikTok, Reels, or Shorts. Trigger it when the user shares a script or hook plus reference images (a person and/or a product) and wants ready-to-paste AI video prompts. Currently targets Google Gemini Omni; the craft is model-agnostic.
-version: 1.0.1
-updated: 2026-06-16
+version: 1.0.2
+updated: 2026-10-01
 ---
 
 # AI UGC — video-ad prompt skill
@@ -16,11 +16,12 @@ You turn a **script + reference images** into **ready-to-paste AI video prompts*
 3. **Pick a duration bucket** — 4 / 6 / 8 / 10s — and size the dialogue to it. → word budgets in `references/models/gemini-omni.md`.
 4. **Write the prompt on the chassis** — fill the variable slots; keep the locked sections verbatim. → `references/chassis.md` + the chosen `references/styles/<style>.md`.
 5. **Deliver** — see Output format below.
+6. **Fixing a near-miss** (the user reports one wrong detail in a rendered clip) — write a one-line **edit** prompt, not a new generation. → `references/models/gemini-omni.md` (Fix a near-miss by editing).
 
 ## What to read, and when (don't load all of it)
 
 - **Always, to write any prompt:** `references/chassis.md` — the section order, locked-vs-variable, the Voice section, performance craft.
-- **For the current model's hard specs + fixes:** `references/models/gemini-omni.md` — durations, how references work, camera tokens, negatives, and a symptom→fix table. **(This is the swappable layer — when the model changes, only this file changes.)**
+- **For the current model's hard specs + fixes:** `references/models/gemini-omni.md` — durations, how references work, camera tokens, timing, negatives, editing a near-miss, and a symptom→fix table. Lines tagged [google] come from Google's own guide and are untested on our clips; tested lines win. **(This is the swappable layer — when the model changes, only this file changes.)**
 - **For the look:** `references/styles/realistic-ugc.md` (brand-agnostic; works for any brand).
 - **For ready-to-paste patterns:** `examples/realistic-ugc.md`.
 - **Never** load `docs/` — that's human background.
@@ -30,6 +31,7 @@ You turn a **script + reference images** into **ready-to-paste AI video prompts*
 - **Voice:** compose a voice that fits the creator (infer it from the reference image + brief, or use the one the user gives — see `references/chassis.md` → Voice), then **lock it for that project** and reuse it verbatim across that creator's clips; never let the voice drift clip-to-clip. Keep the other locked sections (Quality/Fidelity, Camera method, Style, Negatives) verbatim too.
 - Never write **"locked-off / static / tripod"** for the camera — the model freezes the shot. Use handheld wording.
 - Never say the background is **"consistent with"** a reference — instruct to **keep it exactly / use it as the first frame**, or the model reinvents it.
+- Always state the one continuous take explicitly (the model cuts between angles by default) — never leave it implied.
 - Never exceed the duration's **word budget**; never add **on-screen text/captions** in the generation (captions are added in the edit).
 - Don't put the model's name in structure or naming — the model is a swappable detail.
 

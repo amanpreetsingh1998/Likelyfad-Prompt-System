@@ -20,6 +20,11 @@ Lightweight versioning/quality log for prompt attempts (adapted from Google's pr
 | ai-ugc — Voice composed per creator | `video/ai-ugc/references/chassis.md` | Does a composed voice stay identical across a project's clips? |
 | ai-ugc-seedance — the skill as written (1.0.0) | `video/ai-ugc-seedance/examples/` | Built from production prompts that rendered well, but the skill's own output hasn't been rendered. Does a prompt the skill writes perform like the production ones? Do open-ended clips stitch cleanly? Does the product stay on its side across a series? |
 | ai-ugc-seedance — trial formats | `video/ai-ugc-seedance/references/delivery/trial-formats.md` | Founder talking head, street interview, hands-only voiceover, two-person dialogue: none run in production. Promote or drop each one after its first real run. |
+| ai-animation — direct 3D explainer style | `skills/ai-animation/examples/direct-3d-explainer.md` | Do 5–7 beats hold inside an 8s render, or does it smear and need the split? Does amber stay on stress only? Does a stripped location stay stripped? Do two clips match well enough to sit side by side? |
+| ai-song — hook mini-gen + editor join | `skills/ai-song/examples/three-hooks-one-body.md` | Does the Voice lock actually hold the singer across standalone hook gens? Does the riser-and-drop join read as intentional, especially when hook lengths vary a lot? |
+| ai-animation — sung lip-sync | `skills/ai-animation/examples/pixar-disney-singing.md` | Does the transcript-plus-track rule hold the words? Does timing drift enough to need the black-screen-MP4 fallback? |
+| ai-ugc 1.0.2 — Google Flow guide lines ([google]) | `skills/ai-ugc/references/models/gemini-omni.md` · `docs/gemini-omni-flow-guide.md` | Does "No scene cuts" + the stated one-take stop mid-take angle cuts? Does a "Keep everything else the same" edit fix one detail without breaking lip-sync, voice or shake? Do timecode beats land, compared with word-pinned gestures? |
+| ai-ugc — Voice composed per creator | `skills/ai-ugc/references/chassis.md` | Does a composed voice stay identical across a project's clips? |
 
 ## How to use
 - Add a row whenever you test a new prompt or variant. One row per **finding**, not per render — several findings from one build get several rows.

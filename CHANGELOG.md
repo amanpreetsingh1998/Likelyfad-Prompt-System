@@ -4,6 +4,15 @@ All notable changes to this system are documented here. Format follows [Keep a C
 
 ## [Unreleased]
 
+## ai-ugc@1.0.2 — 2026-10-01 (released untested on renders; test pending)
+Takes in Google's own prompting guide for the model, *"Creative prompting with Gemini Omni in Google Flow"* (@FlowbyGoogle, 2026-10-01). Every new line is tagged **[google]** and is untested on our clips; where it disagrees with a tested line, the tested line wins until a render settles it. Tip-by-tip mapping: `docs/gemini-omni-flow-guide.md`.
+### Changed
+- **`models/gemini-omni.md`**: the model **cuts between angles by default**, so the one-take is now stated explicitly (this replaces the old claim "one continuous take per generation"). New sections: more reference types (video as a motion and audio reference, last frame, style transfer), timing with timecodes (a test variant; word-pinned gestures stay the default), Google's negatives list with the two that must never be used on UGC (*No camera movement*, *No dialogue*), and **fixing a near-miss by conversational edit** ("Keep everything else the same"). Two new symptom rows. The access line now flags reports of an API preview and an "Omni 1.1 Flash" version as unverified.
+- **Locked Negatives** (`styles/realistic-ugc.md` 1.0.1, `chassis.md`, `examples/realistic-ugc.md`): open with **"No scene cuts."**. The example's line is marked as not yet re-rendered.
+- **`SKILL.md`**: new must-never (always state the one-take), workflow step 6 (fix a near-miss by editing), and a note that [google] lines are untested.
+### Note
+- Version collision: the parked `naming-rule-patch` branch also claimed ai-ugc 1.0.2. If it is ever revived, it takes the next number.
+
 ## ai-animation@1.4.1 — 2026-09-18
 Wording-only patch.
 ### Changed

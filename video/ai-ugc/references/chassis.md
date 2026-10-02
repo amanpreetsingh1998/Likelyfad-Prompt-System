@@ -14,7 +14,7 @@ The reusable skeleton for every UGC prompt. **Locked** sections are pasted verba
 8. **Dialogue** *(variable)* — the exact spoken line + "accurate lip sync, fast natural pace."
 9. **Audio / Environment** *(variable scene, locked realism)* — real phone-mic outdoor sound; no studio/music/cinematic design.
 10. **Style** *(locked per style)* — see `styles/<style>.md`.
-11. **Negative Constraints** *(locked)* — tight cue line + the model-specific locks (→ `models/gemini-omni.md`).
+11. **Negative Constraints** *(locked)* — opens with "No scene cuts" (the one-take, stated a second time), then the tight cue line + the model-specific locks (→ `models/gemini-omni.md`).
 
 ## Locked vs. variable
 

@@ -1,7 +1,7 @@
 ---
 style: realistic-ugc
-version: 1.0.0
-updated: 2026-06-16
+version: 1.0.1
+updated: 2026-10-01
 ---
 
 # Style — Realistic UGC (brand-agnostic)
@@ -39,7 +39,7 @@ Audio / Environment Sound: Realistic iPhone-recorded [setting] audio — [soft n
 
 Style: Authentic TikTok/Reels UGC. Raw handheld smartphone selfie footage with natural camera shake. Natural skin texture with visible freckles. Slightly imperfect, candid realism.
 
-Negative Constraints: No captions, no on-screen text, no logos other than the product label, no morphing, no warping, no extra or missing fingers. Do not mirror, flip, or horizontally reverse the shot — keep the same left-right layout as @image1. Do not recreate or change the background. Do not make the camera tripod-static — natural handheld shake must stay visible. Do not change the outfit, hair, skin, or the product.
+Negative Constraints: No scene cuts. No captions, no on-screen text, no logos other than the product label, no morphing, no warping, no extra or missing fingers. Do not mirror, flip, or horizontally reverse the shot — keep the same left-right layout as @image1. Do not recreate or change the background. Do not make the camera tripod-static — natural handheld shake must stay visible. Do not change the outfit, hair, skin, or the product.
 ```
 
 ## Notes

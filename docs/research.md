@@ -17,6 +17,7 @@ The "why" behind the system. Kept out of the agent load path on purpose (loading
 ## Gemini Omni (current model) — see `video/ai-ugc/references/models/gemini-omni.md` for the working facts
 - Confirmed first-hand (Gemini Omni API prompt repo): durations 4/6/8/10, 9:16, 1–5 reference images, native lip-sync, named-voice presets, SynthID, no public API at launch.
 - Community/snippet-sourced (lower confidence): exact resolution, pricing, some safety specifics.
+- **Google's own prompting guide (2026-10-01)**, mapped tip by tip to the skill: `docs/gemini-omni-flow-guide.md`. Key finding: the model **cuts between angles by default**, so the one-take must be stated. Untested on our clips. Blogs (unverified) now report an API preview since 2026-06-30, which would date the "no public API at launch" line above.
 
 ## Loops (maintenance) — assessed, deferred for now
 - Agentic loops (ReAct; scheduled/background runs; "Ralph" while-loops) shine on large *running* codebases with automated test signals — mostly overkill for a small prompt repo. Two real future fits: (1) a scheduled **consistency check** (do all referenced file paths resolve?); (2) a monthly **propose-only** "re-research the model facts → draft a diff." Guardrails if adopted: open PRs (never push), lock sections off-limits, hard caps.

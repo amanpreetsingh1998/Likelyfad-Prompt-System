@@ -1,6 +1,6 @@
 # Examples — Realistic UGC (worked, ready-to-paste)
 
-A real, tested example: a supplement brand (Lymphoria) UGC hook. Three interchangeable hook variants — **only the Dialogue line changes**; everything else is identical so the clips stay consistent. This is a reference pattern, not a default — swap the subject/product/brand for your own.
+A real, tested example (2026-06). The *"No scene cuts."* opener in its Negatives was added on 2026-10-01 from Google's Flow guide and has not been re-rendered yet: a supplement brand (Lymphoria) UGC hook. Three interchangeable hook variants — **only the Dialogue line changes**; everything else is identical so the clips stay consistent. This is a reference pattern, not a default — swap the subject/product/brand for your own.
 
 ## Hook (10s bucket) — canonical prompt
 
@@ -25,7 +25,7 @@ Audio / Environment Sound: Realistic iPhone-recorded outdoor audio — soft natu
 
 Style: Authentic TikTok/Reels UGC. Raw handheld smartphone selfie footage with natural camera shake. Natural skin texture with visible freckles. Slightly imperfect, candid realism.
 
-Negative Constraints: No captions, no on-screen text, no logos other than the bottle label, no morphing, no warping, no extra or missing fingers. Do not mirror, flip, or horizontally reverse the shot — keep the same left-right layout as @image1, including the bare shoulder on the same side. Do not recreate or change the background. Do not make the camera tripod-static — natural handheld shake must stay visible. Do not change her outfit, hair, skin, or the bottle.
+Negative Constraints: No scene cuts. No captions, no on-screen text, no logos other than the bottle label, no morphing, no warping, no extra or missing fingers. Do not mirror, flip, or horizontally reverse the shot — keep the same left-right layout as @image1, including the bare shoulder on the same side. Do not recreate or change the background. Do not make the camera tripod-static — natural handheld shake must stay visible. Do not change her outfit, hair, skin, or the bottle.
 ```
 
 **Duration:** 10 seconds.
