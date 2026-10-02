@@ -8,9 +8,9 @@ The script arrives **finished and written as a song**. Your job is to lay it int
 ## Section order (of the delivered package)
 1. **Sound (Style field)** *(variable per song, one sound per set)* — genre, BPM, mood, vocal, production. → `styles/<style>.md` + `models/suno.md`.
 2. **Words (Lyrics field)** *(locked verbatim, you add only tags/cues/breaks)* — the script sung exactly, inside section tags. → below + `models/suno.md`.
-3. **Settings** *(variable)* — Exclude Styles, slider values, Persona, stated BPM + key. → `models/suno.md`.
-4. **Variants** *(variable)* — for a 3-hook script, Hook 2 / Hook 3 as **standalone Voice-locked hook mini-generations**. → `models/suno.md` (Job A).
-5. **Assembly runbook** *(locked method)* — the generate / Voice-locked hook mini-gen / external-editor join / Extend / export steps. → `models/suno.md`.
+3. **Settings** *(variable)* — Exclude Styles, slider values (Variety 0), Max Mode, Style Persona, stated BPM + key. → `models/suno.md`.
+4. **Variants** *(variable)* — for a 3-hook script, Hook 2 / Hook 3 as **standalone Persona-locked hook mini-generations**. → `models/suno.md` (Job A).
+5. **Assembly runbook** *(locked method)* — the generate / Persona-locked hook mini-gen / external-editor join / Extend / export steps. → `models/suno.md`.
 6. **Visual / timing seed** *(variable)* — the hand-off note for the animation skill. → below.
 
 ## Locked vs. variable

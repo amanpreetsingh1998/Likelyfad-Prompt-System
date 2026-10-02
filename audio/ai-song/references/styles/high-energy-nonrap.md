@@ -1,7 +1,7 @@
 ---
 style: high-energy-nonrap
-version: 1.0.0
-updated: 2026-07-14
+version: 1.1.0
+updated: 2026-10-02
 ---
 
 # Style — High-Energy, Non-Rap (brand-agnostic)
@@ -57,9 +57,17 @@ Comma-separated, genre first, BPM front-loaded, ~15–30 words. Reinforce gaples
 ```
 
 **Exclude Styles:** `rap, hip-hop, spoken word, instrumental intro, instrumental break, breakdown, slow tempo` (wide list — an account A/B beat the trimmed "2–5 entries" version; keep it wide)
-**Sliders:** Weirdness low · Style Influence high (note exact values; reuse across the set)
+**Advanced → More Options:** Vocal Gender set · Personalize Off · Duration Auto (Custom = test) · **never press the Styles magic wand**. **Sliders:** **Variety Off (0)** (or the Style gets rewritten) · Weirdness low · Style Influence high (note exact values; reuse across the set) · **Max Mode ON** for anything over 2 minutes
+**Long songs (5–10 min):** add `full band throughout, sung vocals throughout` to the Style string, add `whisper, whispered vocals, a cappella, ambient, narration` to Exclude, and follow the long-songs recipe in `models/suno.md` (untested on v6)
 
-## Account-proven strings (male ad set, 2026-07 render A/Bs)
+## Optional pacing block (paced ads: energetic, transformation, urgency) [from a peer team's SOP; untested by us]
+Append to the Style string when the song must feel fast, not just have a high BPM:
+```
+nearly continuous singing, gaps under one second, short syllabic rhythmic phrasing, quick line-to-line delivery, no sustained notes, no long held vowels, no melisma, no vocal runs
+```
+Not for slow or emotional songs. Watch that dense lines don't tip into rap (keep the rap Exclude).
+
+## Account-proven strings (male ad set, 2026-07 render A/Bs — on v5.5, now retired; re-test on v6)
 Best gapless run so far — **dance-pop beat anthemic pop-rock** (guitar-led rock invites riffs/turnarounds between phrases; four-on-the-floor pop keeps the topline riding the beat):
 ```
 high-energy dance-pop, 160 BPM, driving four-on-the-floor beat, gritty belted male vocals, vocals dominate the mix, singer begins on the first beat, wall-to-wall continuous vocals, catchy melodic topline, tight punchy modern mix
@@ -71,5 +79,5 @@ Notes: `vocals dominate the mix` measurably pulled vocals forward; 148 → 160 B
 Avoid hype/cinematic words that trigger long intros or vague results: `cinematic`, `epic`, `orchestral`, `atmospheric`, `stunning`, `breathtaking`, `professional voiceover`. (`anthemic` was flagged by one guide as an intro-trigger but tested fine on our account; "no instrumental intro / no instrumental breaks" phrases also tested fine — better than without, despite pink-elephant lore.) Say the concrete sound instead (`driving`, `belted`, `polished mix`).
 
 ## Notes
-- One sound per set — the chosen treatment's Style string + Persona + sliders + BPM/key are reused across all 3 hook variants and every extend.
+- One sound per set — the chosen treatment's Style string + Style Persona + sliders (Variety 0) + BPM/key are reused across all 3 hook variants and every extend.
 - Everything about *matching the body* and *building long songs* is method, not sound → `models/suno.md`.
